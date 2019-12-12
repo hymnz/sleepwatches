@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5031E5239C168800A1CD1C /* Date+Next.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5031E4239C168800A1CD1C /* Date+Next.swift */; };
+		0A5031EA239C16D200A1CD1C /* SleepRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5031E6239C16D100A1CD1C /* SleepRow.swift */; };
+		0A5031EB239C16D200A1CD1C /* SleepResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5031E7239C16D100A1CD1C /* SleepResultController.swift */; };
+		0A5031EC239C16D200A1CD1C /* SleepResultController+Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5031E8239C16D100A1CD1C /* SleepResultController+Sleep.swift */; };
+		0A5031ED239C16D200A1CD1C /* SleepTrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5031E9239C16D100A1CD1C /* SleepTrackController.swift */; };
+		0A852032239FBADD004593C3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A852031239FBADD004593C3 /* Network.swift */; };
+		0A852035239FBB4B004593C3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A852033239FBB4B004593C3 /* NetworkError.swift */; };
+		0A852036239FBB4B004593C3 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A852034239FBB4B004593C3 /* NetworkResponse.swift */; };
+		0A852038239FBB52004593C3 /* JsonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A852037239FBB52004593C3 /* JsonError.swift */; };
+		0A85203C239FC9B5004593C3 /* UUIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85203B239FC9B5004593C3 /* UUIDGenerator.swift */; };
+		0A85203E239FD017004593C3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85203D239FD017004593C3 /* Constant.swift */; };
 		0ADAEBE123900B38009D8629 /* sleepwatches WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0ADAEBE023900B38009D8629 /* sleepwatches WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0ADAEBE723900B38009D8629 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADAEBE523900B38009D8629 /* Interface.storyboard */; };
 		0ADAEBE923900B39009D8629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADAEBE823900B39009D8629 /* Assets.xcassets */; };
@@ -14,6 +25,12 @@
 		0ADAEBF523900B39009D8629 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEBF423900B39009D8629 /* InterfaceController.swift */; };
 		0ADAEBF723900B39009D8629 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEBF623900B39009D8629 /* ExtensionDelegate.swift */; };
 		0ADAEBF923900B39009D8629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADAEBF823900B39009D8629 /* Assets.xcassets */; };
+		0ADAEC0E23900BD4009D8629 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEC0823900BD4009D8629 /* AES.swift */; };
+		0ADAEC0F23900BD4009D8629 /* InterfaceController+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEC0923900BD4009D8629 /* InterfaceController+Location.swift */; };
+		0ADAEC1023900BD4009D8629 /* InterfaceController+Motion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEC0A23900BD4009D8629 /* InterfaceController+Motion.swift */; };
+		0ADAEC1123900BD4009D8629 /* InterfaceController+Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEC0B23900BD4009D8629 /* InterfaceController+Health.swift */; };
+		0ADAEC1323900BD4009D8629 /* Double+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEC0D23900BD4009D8629 /* Double+Round.swift */; };
+		0ADAEC1923900CE8009D8629 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADAEC1823900CE8009D8629 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +76,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A5031E4239C168800A1CD1C /* Date+Next.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Next.swift"; sourceTree = "<group>"; };
+		0A5031E6239C16D100A1CD1C /* SleepRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepRow.swift; sourceTree = "<group>"; };
+		0A5031E7239C16D100A1CD1C /* SleepResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepResultController.swift; sourceTree = "<group>"; };
+		0A5031E8239C16D100A1CD1C /* SleepResultController+Sleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepResultController+Sleep.swift"; sourceTree = "<group>"; };
+		0A5031E9239C16D100A1CD1C /* SleepTrackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepTrackController.swift; sourceTree = "<group>"; };
+		0A852031239FBADD004593C3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		0A852033239FBB4B004593C3 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0A852034239FBB4B004593C3 /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		0A852037239FBB52004593C3 /* JsonError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonError.swift; sourceTree = "<group>"; };
+		0A85203B239FC9B5004593C3 /* UUIDGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDGenerator.swift; sourceTree = "<group>"; };
+		0A85203D239FD017004593C3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0ADAEBDC23900B38009D8629 /* sleepwatches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sleepwatches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADAEBE023900B38009D8629 /* sleepwatches WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sleepwatches WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADAEBE623900B38009D8629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -69,6 +97,14 @@
 		0ADAEBF623900B39009D8629 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		0ADAEBF823900B39009D8629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ADAEBFA23900B39009D8629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADAEC0823900BD4009D8629 /* AES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
+		0ADAEC0923900BD4009D8629 /* InterfaceController+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InterfaceController+Location.swift"; sourceTree = "<group>"; };
+		0ADAEC0A23900BD4009D8629 /* InterfaceController+Motion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InterfaceController+Motion.swift"; sourceTree = "<group>"; };
+		0ADAEC0B23900BD4009D8629 /* InterfaceController+Health.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InterfaceController+Health.swift"; sourceTree = "<group>"; };
+		0ADAEC0D23900BD4009D8629 /* Double+Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Round.swift"; sourceTree = "<group>"; };
+		0ADAEC1523900CBF009D8629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADAEC1623900CE8009D8629 /* sleepwatches WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "sleepwatches WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		0ADAEC1823900CE8009D8629 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,18 +112,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADAEC1923900CE8009D8629 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5031E3239C167000A1CD1C /* util */ = {
+			isa = PBXGroup;
+			children = (
+				0ADAEC0823900BD4009D8629 /* AES.swift */,
+				0ADAEC0D23900BD4009D8629 /* Double+Round.swift */,
+				0A5031E4239C168800A1CD1C /* Date+Next.swift */,
+				0A852031239FBADD004593C3 /* Network.swift */,
+				0A852033239FBB4B004593C3 /* NetworkError.swift */,
+				0A852034239FBB4B004593C3 /* NetworkResponse.swift */,
+				0A852037239FBB52004593C3 /* JsonError.swift */,
+				0A85203B239FC9B5004593C3 /* UUIDGenerator.swift */,
+				0A85203D239FD017004593C3 /* Constant.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		0ADAEBD523900B38009D8629 = {
 			isa = PBXGroup;
 			children = (
+				0ADAEC1523900CBF009D8629 /* Info.plist */,
 				0ADAEBE423900B38009D8629 /* sleepwatches WatchKit App */,
 				0ADAEBF323900B39009D8629 /* sleepwatches WatchKit Extension */,
 				0ADAEBDD23900B38009D8629 /* Products */,
+				0ADAEC1723900CE8009D8629 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,12 +169,29 @@
 		0ADAEBF323900B39009D8629 /* sleepwatches WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0ADAEBF423900B39009D8629 /* InterfaceController.swift */,
+				0ADAEC1623900CE8009D8629 /* sleepwatches WatchKit Extension.entitlements */,
+				0A5031E3239C167000A1CD1C /* util */,
 				0ADAEBF623900B39009D8629 /* ExtensionDelegate.swift */,
+				0ADAEBF423900B39009D8629 /* InterfaceController.swift */,
+				0ADAEC0B23900BD4009D8629 /* InterfaceController+Health.swift */,
+				0ADAEC0923900BD4009D8629 /* InterfaceController+Location.swift */,
+				0ADAEC0A23900BD4009D8629 /* InterfaceController+Motion.swift */,
+				0A5031E7239C16D100A1CD1C /* SleepResultController.swift */,
+				0A5031E8239C16D100A1CD1C /* SleepResultController+Sleep.swift */,
+				0A5031E6239C16D100A1CD1C /* SleepRow.swift */,
+				0A5031E9239C16D100A1CD1C /* SleepTrackController.swift */,
 				0ADAEBF823900B39009D8629 /* Assets.xcassets */,
 				0ADAEBFA23900B39009D8629 /* Info.plist */,
 			);
 			path = "sleepwatches WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		0ADAEC1723900CE8009D8629 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ADAEC1823900CE8009D8629 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +320,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A852032239FBADD004593C3 /* Network.swift in Sources */,
+				0A852035239FBB4B004593C3 /* NetworkError.swift in Sources */,
+				0ADAEC1023900BD4009D8629 /* InterfaceController+Motion.swift in Sources */,
 				0ADAEBF723900B39009D8629 /* ExtensionDelegate.swift in Sources */,
+				0ADAEC1323900BD4009D8629 /* Double+Round.swift in Sources */,
+				0A5031EC239C16D200A1CD1C /* SleepResultController+Sleep.swift in Sources */,
+				0ADAEC0E23900BD4009D8629 /* AES.swift in Sources */,
+				0ADAEC0F23900BD4009D8629 /* InterfaceController+Location.swift in Sources */,
+				0ADAEC1123900BD4009D8629 /* InterfaceController+Health.swift in Sources */,
+				0A5031E5239C168800A1CD1C /* Date+Next.swift in Sources */,
+				0A5031EA239C16D200A1CD1C /* SleepRow.swift in Sources */,
+				0A85203E239FD017004593C3 /* Constant.swift in Sources */,
+				0A852036239FBB4B004593C3 /* NetworkResponse.swift in Sources */,
+				0A5031ED239C16D200A1CD1C /* SleepTrackController.swift in Sources */,
+				0A85203C239FC9B5004593C3 /* UUIDGenerator.swift in Sources */,
+				0A5031EB239C16D200A1CD1C /* SleepResultController.swift in Sources */,
+				0A852038239FBB52004593C3 /* JsonError.swift in Sources */,
 				0ADAEBF523900B39009D8629 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +484,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit Extension/sleepwatches WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = "sleepwatches WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -418,7 +508,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit Extension/sleepwatches WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = "sleepwatches WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -442,6 +534,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				IBSC_MODULE = sleepwatches_WatchKit_Extension;
 				INFOPLIST_FILE = "sleepwatches WatchKit App/Info.plist";
@@ -461,6 +554,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				IBSC_MODULE = sleepwatches_WatchKit_Extension;
 				INFOPLIST_FILE = "sleepwatches WatchKit App/Info.plist";
@@ -478,8 +572,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 65VQ762N68;
+				INFOPLIST_FILE = Info.plist;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sleepwatches;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,8 +586,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 65VQ762N68;
+				INFOPLIST_FILE = Info.plist;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sleepwatches;
 				PRODUCT_NAME = "$(TARGET_NAME)";

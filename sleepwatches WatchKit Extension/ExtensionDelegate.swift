@@ -1,8 +1,9 @@
 //
 //  ExtensionDelegate.swift
-//  sleepwatches WatchKit Extension
+//  Tracking WatchKit Extension
 //
-//  Created by pongsil vachirajongkol on 28/11/2562 BE.
+//  Created by pongsil vachirajongkol on 22/11/2562 BE.
+//  Copyright © 2562 timecapsule. All rights reserved.
 //
 
 import WatchKit

@@ -1,15 +1,167 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15505" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Sleep Watches-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller title="Sleep Watches" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="sleepwatches_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Heart Rate" id="p6N-iV-Xu8">
+                            <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <group width="1" alignment="center" spacing="5" id="2X8-Ju-8BZ">
+                            <items>
+                                <group alignment="left" layout="vertical" id="8xg-Jk-jBh">
+                                    <items>
+                                        <label alignment="left" text="BPM" id="N5T-XJ-58o">
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <imageView alignment="left" image="heart" id="XLd-yy-0aD"/>
+                                    </items>
+                                </group>
+                                <label alignment="left" verticalAlignment="center" numberOfLines="0" minimumScaleFactor="0.20000000000000001" id="U5w-yU-Qpd">
+                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Lfv-KW-bwx">
+                            <items>
+                                <label alignment="left" text="GPS : " id="25Y-lR-YNI">
+                                    <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <label alignment="left" minimumScaleFactor="0.10000000000000001" id="wtI-YK-Qph">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="99E-yj-cTu">
+                            <items>
+                                <label alignment="left" text="Speed : " id="ZIA-sP-zWW">
+                                    <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <label alignment="left" minimumScaleFactor="0.10000000000000001" id="HC7-ap-UM6">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="NnN-9I-8EJ">
+                            <items>
+                                <label alignment="left" text="Altitude : " id="ejR-R0-gwC">
+                                    <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <label alignment="left" minimumScaleFactor="0.10000000000000001" id="pXI-yV-gvM">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="altitudeLabel" destination="pXI-yV-gvM" id="zDe-2d-ir1"/>
+                        <outlet property="gpsLabel" destination="wtI-YK-Qph" id="iOw-A3-jYW"/>
+                        <outlet property="heartRateLabel" destination="U5w-yU-Qpd" id="Xlf-Z8-DfN"/>
+                        <outlet property="speedLabel" destination="HC7-ap-UM6" id="fNz-Pe-QRB"/>
+                        <segue destination="o2c-aP-Xzj" kind="relationship" relationship="nextPage" id="ekk-Ln-AJb"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="34" y="50"/>
+        </scene>
+        <!--Sleep Watches-->
+        <scene sceneID="fGx-DZ-Zay">
+            <objects>
+                <controller title="Sleep Watches" hidesWhenLoading="NO" id="o2c-aP-Xzj" customClass="SleepTrackController" customModule="sleepwatches_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Sleep Track" textAlignment="left" id="ud0-sP-XQE">
+                            <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                        </label>
+                        <group width="1" alignment="left" hidden="YES" layout="vertical" id="r3Z-cj-K3d">
+                            <items>
+                                <label alignment="left" text="It time to Sleep" textAlignment="left" numberOfLines="2" id="us8-g7-qQg">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <label alignment="left" text="Tracking in progress..." textAlignment="left" numberOfLines="2" id="P7Z-g6-JrA">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <label alignment="left" verticalAlignment="center" text="Press Stop when Wekeup" textAlignment="left" numberOfLines="2" id="lFL-lc-tIg">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="center" layout="vertical" id="XXi-iD-v44">
+                            <items>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="Start" id="HIM-SF-Hee">
+                                    <connections>
+                                        <action selector="startAction" destination="o2c-aP-Xzj" id="7Zd-pt-pAN"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="End" id="Tqq-PP-OGn">
+                                    <connections>
+                                        <segue destination="NRU-ON-8ZA" kind="push" id="biy-hu-mV9"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="detailGroup" destination="r3Z-cj-K3d" id="f6Z-0e-27v"/>
+                        <outlet property="startButton" destination="HIM-SF-Hee" id="lN9-c3-hLX"/>
+                        <outlet property="stopButton" destination="Tqq-PP-OGn" id="NTR-Co-UE3"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="282" y="50"/>
+        </scene>
+        <!--Sleep Watches-->
+        <scene sceneID="YO6-4b-Hqx">
+            <objects>
+                <controller title="Sleep Watches" id="NRU-ON-8ZA" customClass="SleepResultController" customModule="sleepwatches_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="ajg-wI-opL">
+                            <items>
+                                <tableRow identifier="SleepRow" id="DDU-aK-H7c" customClass="SleepRow" customModule="sleepwatches_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="S3T-vL-z3a">
+                                        <items>
+                                            <label alignment="left" id="cIr-XR-J8P">
+                                                <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="font" type="system" pointSize="18"/>
+                                            </label>
+                                            <label alignment="left" numberOfLines="3" minimumScaleFactor="0.59999999999999998" id="w4I-Eo-1fV">
+                                                <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                            <label alignment="left" numberOfLines="3" minimumScaleFactor="0.59999999999999998" id="34Z-U8-Xmu">
+                                                <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="endLabel" destination="34Z-U8-Xmu" id="wtd-db-WyV"/>
+                                        <outlet property="startLabel" destination="w4I-Eo-1fV" id="O0F-Gv-O0p"/>
+                                        <outlet property="titleLabel" destination="cIr-XR-J8P" id="EIT-aj-8Ab"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="resultTable" destination="ajg-wI-opL" id="Eww-vS-NBA"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="539" y="50"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" width="20" height="18"/>
+    </resources>
 </document>
