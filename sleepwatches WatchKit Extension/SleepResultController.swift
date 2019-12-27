@@ -14,14 +14,19 @@ class SleepResultController: WKInterfaceController {
     var startDate : Date = Date()
     var endDate : Date = Date()
     
+    var apiNetwork : Network!
+    
     @IBOutlet weak var resultTable: WKInterfaceTable!
+    @IBOutlet weak var errorLabel: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext:context)
         let date = context as? [Date]
 
-        self.startDate = Date.yesterday
+        self.startDate = date?[0] ?? Date()
         self.endDate = date?[1] ?? Date()
+        
+        self.apiNetwork = Network(host: Constant.HOST)
     }
     
     override func willActivate() {

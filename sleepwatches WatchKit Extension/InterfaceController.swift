@@ -19,6 +19,7 @@ class InterfaceController: WKInterfaceController {
     var builder : HKLiveWorkoutBuilder?
     let altimeter:CMAltimeter = CMAltimeter()
     let locationManager:CLLocationManager = CLLocationManager()
+    let motionManager = CMMotionManager()
     
     var timerValidateSession = Timer()
     var apiNetwork : Network!
@@ -27,6 +28,12 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var gpsLabel: WKInterfaceLabel!
     @IBOutlet weak var speedLabel: WKInterfaceLabel!
     @IBOutlet weak var altitudeLabel: WKInterfaceLabel!
+    @IBOutlet weak var acceleroXLabel: WKInterfaceLabel!
+    @IBOutlet weak var acceleroYLabel: WKInterfaceLabel!
+    @IBOutlet weak var acceleroZLabel: WKInterfaceLabel!
+    @IBOutlet weak var gyroXLabel: WKInterfaceLabel!
+    @IBOutlet weak var gyroYLabel: WKInterfaceLabel!
+    @IBOutlet weak var gyroZLabel: WKInterfaceLabel!
     
     var id = ""
     var heartRate = ""
@@ -34,10 +41,19 @@ class InterfaceController: WKInterfaceController {
     var longitude = ""
     var speed = ""
     var altitude = ""
+    var acceleroX = ""
+    var acceleroY = ""
+    var acceleroZ = ""
+    var gyroX = ""
+    var gyroY = ""
+    var gyroZ = ""
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         self.apiNetwork = Network(host: Constant.HOST )
+        
+        motionManager.gyroUpdateInterval = 0.1
+        motionManager.accelerometerUpdateInterval = 0.1
         
     }
     
@@ -46,7 +62,8 @@ class InterfaceController: WKInterfaceController {
         
         checkLocationServices()
         startTrackingAltitudeChanges()
-        
+        startTrackingAccelerometerChanges()
+        startTrackingGyroChanges()
         startTrackingHeartRate()
         
         startValidateSession()
@@ -57,6 +74,8 @@ class InterfaceController: WKInterfaceController {
         
         self.locationManager.stopUpdatingLocation()
         self.altimeter.stopRelativeAltitudeUpdates()
+        self.motionManager.stopAccelerometerUpdates()
+        
         self.builder?.endCollection(withEnd: Date(), completion: { (success, error) in
             
         })
@@ -64,6 +83,8 @@ class InterfaceController: WKInterfaceController {
             
         })
         self.workoutSession?.end()
+        
+        self.stopValidateSession()
     }
 
     func stopValidateSession() {
@@ -80,15 +101,41 @@ class InterfaceController: WKInterfaceController {
     func encrypt(_ string:String) -> String {               // 16 bytes for AES128
         let aes256 = AES(key: Constant.KEY256, iv: Constant.IV)
         let encryptedPassword256 = aes256?.encrypt(string: string)
-
         return encryptedPassword256?.base64EncodedString() ?? ""
     }
     
     @objc func requestDailyTrack() {
         
-        let param :[String:Any] = ["id": UUIDGenerator.sharedInstance.string,"datetime": encrypt(Date().toCurrentTimeZoneString()),"heartRate": encrypt(heartRate),"longitude": encrypt(longitude),"latitude": encrypt(latitude),"speed": encrypt(speed),"altitude": encrypt(altitude)]
+        var param :[String:Any] = ["userId": UUIDGenerator.sharedInstance.string]
+        param["ts"] = Date().timeIntervalSince1970
         
-        print(param)
+        var payload :[String:Any] = [:]
+        
+        if (!heartRate.isEmpty) {
+            payload["hr"] = encrypt(heartRate)
+        }
+        
+        if (!longitude.isEmpty && !latitude.isEmpty) {
+            payload["geo"] = ["long":encrypt(longitude),"lat":encrypt(latitude)]
+        }
+        
+        if (!acceleroX.isEmpty && !acceleroY.isEmpty && !acceleroZ.isEmpty) {
+            payload["acc"] = ["x":encrypt(acceleroX),"y":encrypt(acceleroY),"z":encrypt(acceleroZ)]
+        }
+        
+        if (!gyroX.isEmpty && !gyroY.isEmpty && !gyroZ.isEmpty) {
+            payload["gyr"] = ["x":encrypt(gyroX),"y":encrypt(gyroY),"z":encrypt(gyroZ)]
+        }
+        
+        if (!speed.isEmpty) {
+            payload["speed"] = encrypt(speed)
+        }
+        
+        if (!altitude.isEmpty) {
+            payload["altitude"] = encrypt(altitude)
+        }
+        
+        param["payload"] = payload
         
         apiNetwork.post(path: "/daily/track", params: param ){ (data, error) in
             

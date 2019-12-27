@@ -62,10 +62,58 @@
                                 </label>
                             </items>
                         </group>
+                        <group width="1" alignment="left" layout="vertical" id="ERL-2a-jR4">
+                            <items>
+                                <label alignment="left" text="Accelerometer : " id="2K7-5f-OZf" userLabel="Accelerometer :">
+                                    <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <group width="1" alignment="left" id="sUO-1k-KoK">
+                                    <items>
+                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="p2O-Xw-FTv">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="Jx4-dX-nXH">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="5PC-0o-ZjR">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="1sH-M0-SiD">
+                            <items>
+                                <label alignment="left" text="Gyroscope : " id="HU7-Wf-llA" userLabel="Accelerometer :">
+                                    <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <group width="1" alignment="left" id="0IU-5f-j11">
+                                    <items>
+                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="krL-T7-Z00">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="Pxl-ih-oCq">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="cka-Kc-go7">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
                     </items>
                     <connections>
+                        <outlet property="acceleroXLabel" destination="p2O-Xw-FTv" id="d27-Tb-Wod"/>
+                        <outlet property="acceleroYLabel" destination="Jx4-dX-nXH" id="sEo-cy-2tz"/>
+                        <outlet property="acceleroZLabel" destination="5PC-0o-ZjR" id="BZy-JU-0cn"/>
                         <outlet property="altitudeLabel" destination="pXI-yV-gvM" id="zDe-2d-ir1"/>
                         <outlet property="gpsLabel" destination="wtI-YK-Qph" id="iOw-A3-jYW"/>
+                        <outlet property="gyroXLabel" destination="krL-T7-Z00" id="EvK-pz-Nwt"/>
+                        <outlet property="gyroYLabel" destination="Pxl-ih-oCq" id="xDX-kc-ust"/>
+                        <outlet property="gyroZLabel" destination="cka-Kc-go7" id="SrO-Ic-Ykg"/>
                         <outlet property="heartRateLabel" destination="U5w-yU-Qpd" id="Xlf-Z8-DfN"/>
                         <outlet property="speedLabel" destination="HC7-ap-UM6" id="fNz-Pe-QRB"/>
                         <segue destination="o2c-aP-Xzj" kind="relationship" relationship="nextPage" id="ekk-Ln-AJb"/>
@@ -152,8 +200,10 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <label alignment="left" id="yRv-HT-jF9"/>
                     </items>
                     <connections>
+                        <outlet property="errorLabel" destination="yRv-HT-jF9" id="79d-gG-USe"/>
                         <outlet property="resultTable" destination="ajg-wI-opL" id="Eww-vS-NBA"/>
                     </connections>
                 </controller>

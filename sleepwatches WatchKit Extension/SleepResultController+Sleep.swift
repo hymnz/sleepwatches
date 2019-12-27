@@ -11,6 +11,7 @@ import HealthKit
 extension SleepResultController {
     
     func setupTrackingSleep() {
+        errorLabel.setHidden(true)
         let types = Set([HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!])
         
         healthStore.requestAuthorization(toShare: types, read: types) { (success, error) in
@@ -63,6 +64,8 @@ extension SleepResultController {
             let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: 10000, sortDescriptors: [sortDescriptor]) { (query, tmpResult, error) -> Void in
                 
                 if error != nil {
+                    self.errorLabel.setHidden(false)
+                    self.errorLabel.setText(error.debugDescription)
                     return
                 }
                 
@@ -102,8 +105,6 @@ extension SleepResultController {
     
     func requestSleepTrack(result:[HKSample]) {
         
-        var param : [[String:Any]] = []
-        
         for (i,item) in result.enumerated() {
             if let sample = item as? HKCategorySample {
                               
@@ -119,13 +120,15 @@ extension SleepResultController {
                                                "start": encrypt("\(sample.startDate.toCurrentTimeZoneString())"),
                                                "end": encrypt("\(sample.endDate.toCurrentTimeZoneString())")]
                         
-                    param.append(track)
+                    self.postSleepTrack(param: track)
                 }
             }
         }
-        let apiNetwork = Network(host: Constant.HOST)
-        print(param)
-        apiNetwork.post(path: "/sleep/track", params: param ){ (data, error) in
+    }
+    
+    func postSleepTrack(param: [String:Any]) {
+        
+        self.apiNetwork.post(path: "/sleep/track", params: param ){ (data, error) in
             
             guard let data = data else {
                 return
