@@ -21,10 +21,9 @@ class SleepResultController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext:context)
-        let date = context as? [Date]
-
-        self.startDate = date?[0] ?? Date()
-        self.endDate = date?[1] ?? Date()
+ 
+        self.startDate = UserDefaults.standard.object(forKey: "startDate") as? Date ?? Date.yesterday
+        self.endDate = UserDefaults.standard.object(forKey: "endDate") as? Date ?? Date()
         
         self.apiNetwork = Network(host: Constant.HOST)
     }

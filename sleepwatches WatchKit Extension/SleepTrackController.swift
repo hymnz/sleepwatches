@@ -14,9 +14,6 @@ class SleepTrackController: WKInterfaceController {
     @IBOutlet weak var startButton: WKInterfaceButton!
     @IBOutlet weak var stopButton: WKInterfaceButton!
     
-    var startDate : Date = Date()
-    var endDate : Date = Date()
-    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
     }
@@ -30,7 +27,9 @@ class SleepTrackController: WKInterfaceController {
     }
     
     @IBAction func startAction() {
-        self.startDate = Date()
+        let startDate = Date()
+        UserDefaults.standard.set(startDate, forKey: "startDate")
+        UserDefaults.standard.synchronize()
         self.detailGroup.setHidden(false)
         self.startButton.setHidden(true)
         self.stopButton.setHidden(false)
@@ -38,11 +37,12 @@ class SleepTrackController: WKInterfaceController {
     
     override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
         
-        self.endDate = Date()
+        let endDate = Date()
+        UserDefaults.standard.set(endDate, forKey: "endDate")
+        UserDefaults.standard.synchronize()
         self.detailGroup.setHidden(true)
         self.startButton.setHidden(false)
         self.stopButton.setHidden(true)
-        let date = [self.startDate,self.endDate]
-        return date
+        return nil
     }
 }

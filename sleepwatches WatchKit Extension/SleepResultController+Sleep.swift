@@ -115,7 +115,7 @@ extension SleepResultController {
                     row.startLabel.setText("Start : \(sample.startDate.toCurrentTimeZoneString())")
                     row.endLabel.setText("End : \(sample.endDate.toCurrentTimeZoneString())")
                     
-                    let track :[String:Any] = ["id": UUIDGenerator.sharedInstance.string,
+                    let track :[String:Any] = ["userId": UUIDGenerator.sharedInstance.string,
                                                "type": encrypt(value),
                                                "start": encrypt("\(sample.startDate.toCurrentTimeZoneString())"),
                                                "end": encrypt("\(sample.endDate.toCurrentTimeZoneString())")]

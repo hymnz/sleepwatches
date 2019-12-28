@@ -1,0 +1,14 @@
+{
+  "name": "trackingapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hymn",
+  "devDependencies": {
+    "nodemon": "^2.0.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.12",
+    "mongoose-timestamp": "^0.6.0"
+  }
+}

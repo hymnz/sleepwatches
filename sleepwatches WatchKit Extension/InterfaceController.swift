@@ -52,8 +52,8 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         self.apiNetwork = Network(host: Constant.HOST )
         
-        motionManager.gyroUpdateInterval = 0.1
-        motionManager.accelerometerUpdateInterval = 0.1
+        motionManager.gyroUpdateInterval = 1
+        motionManager.accelerometerUpdateInterval = 1
         
     }
     
