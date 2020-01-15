@@ -72,19 +72,19 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         super.didDeactivate()
         
-        self.locationManager.stopUpdatingLocation()
-        self.altimeter.stopRelativeAltitudeUpdates()
-        self.motionManager.stopAccelerometerUpdates()
-        
-        self.builder?.endCollection(withEnd: Date(), completion: { (success, error) in
-            
-        })
-        self.builder?.finishWorkout(completion: { (workout, error) in
-            
-        })
-        self.workoutSession?.end()
-        
-        self.stopValidateSession()
+//        self.locationManager.stopUpdatingLocation()
+//        self.altimeter.stopRelativeAltitudeUpdates()
+//        self.motionManager.stopAccelerometerUpdates()
+//
+//        self.builder?.endCollection(withEnd: Date(), completion: { (success, error) in
+//
+//        })
+//        self.builder?.finishWorkout(completion: { (workout, error) in
+//
+//        })
+//        self.workoutSession?.end()
+//
+//        self.stopValidateSession()
     }
 
     func stopValidateSession() {
