@@ -13,10 +13,11 @@ extension InterfaceController: CLLocationManagerDelegate{
     func setupLocationManager() {
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        self.locationManager.distanceFilter = kCLDistanceFilterNone
         self.locationManager.requestLocation()
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
+        self.locationManager.allowsBackgroundLocationUpdates = true
 //        self.altitudeLabel.setText("-")
         self.speedLabel.setText("-")
         self.gpsLabel.setText("-")

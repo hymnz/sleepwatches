@@ -43,6 +43,14 @@
 	<string>HKQuantityTypeIdentifierHeartRate</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>workout-processing</string>
+	</array>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 	<key>WKWatchOnly</key>
