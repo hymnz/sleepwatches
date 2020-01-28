@@ -615,6 +615,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit Extension/sleepwatches WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = "sleepwatches WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -638,6 +639,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit Extension/sleepwatches WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = "sleepwatches WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -662,6 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit App/sleepwatches WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				IBSC_MODULE = sleepwatches_WatchKit_Extension;
 				INFOPLIST_FILE = "sleepwatches WatchKit App/Info.plist";
@@ -682,6 +685,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit App/sleepwatches WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				IBSC_MODULE = sleepwatches_WatchKit_Extension;
 				INFOPLIST_FILE = "sleepwatches WatchKit App/Info.plist";
@@ -701,6 +705,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = sleepwatches/sleepwatches.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = sleepwatches/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -720,6 +725,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = sleepwatches/sleepwatches.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = sleepwatches/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

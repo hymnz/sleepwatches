@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
@@ -30,16 +30,14 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
-	<key>WKExtensionDelegateClassName</key>
-	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
-	<key>WKRunsIndependentlyOfCompanionApp</key>
-	<true/>
 	<key>NSHealthShareUsageDescription</key>
 	<string>HKQuantityTypeIdentifierHeartRate</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>HKQuantityTypeIdentifierHeartRate</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location</string>
+	<key>NSMotionUsageDescription</key>
+	<string>This app needs to be able to access your motion use</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
@@ -48,7 +46,9 @@
 	<array>
 		<string>workout-processing</string>
 	</array>
-    <key>NSMotionUsageDescription</key>
-    <string>This app needs to be able to access your motion use</string>
+	<key>WKExtensionDelegateClassName</key>
+	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
+	<key>WKRunsIndependentlyOfCompanionApp</key>
+	<true/>
 </dict>
 </plist>

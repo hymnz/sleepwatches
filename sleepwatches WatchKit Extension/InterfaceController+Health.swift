@@ -75,6 +75,7 @@ extension InterfaceController: HKLiveWorkoutBuilderDelegate{
             let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
             let value = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit)
             self.heartRate = Double( round( 1 * value! ) / 1 )
+            self.heartRateLabel.setText(String(self.heartRate ?? 0))
             
         default:
             return
