@@ -22,7 +22,4 @@ class UUIDGenerator: NSObject {
             UserDefaults.standard.synchronize()
         }
     }
-    
-    
 }
-

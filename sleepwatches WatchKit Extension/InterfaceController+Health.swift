@@ -8,16 +8,16 @@
 
 import HealthKit
 
-extension InterfaceController{
+extension InterfaceController: HKLiveWorkoutBuilderDelegate{
     
     func startTrackingHeartRate() {
         heartRateLabel.setText("-")
-        heartRate = ""
+        heartRate = nil
         guard HKHealthStore.isHealthDataAvailable() == true else { //err checking/handling
             return
         }
         
-        let types = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
+        let types = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!,HKSampleType.workoutType()])
         
         healthStore.requestAuthorization(toShare: types, read: types) { (success, error) in
             guard success == true else {
@@ -32,73 +32,52 @@ extension InterfaceController{
         configure.activityType = .other
         
         do {
-          self.workoutSession = try HKWorkoutSession(configuration: configure)
+            self.workoutSession = try HKWorkoutSession(healthStore: self.healthStore, configuration: configure)
+            self.builder = workoutSession?.associatedWorkoutBuilder()
+            
+            self.builder?.delegate = self
+            
+            self.builder?.dataSource = HKLiveWorkoutDataSource(healthStore: healthStore, workoutConfiguration: configure)
+            
+            self.workoutSession?.startActivity(with: Date())
+            self.builder?.beginCollection(withStart: Date()) { (success, error) in
+                print(success)
+                if let error = error {
+                    print(error)
+                }
+            }
         } catch let error {
             print(error)
           return
         }
-        
-        let sampleType =
-            HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)
-        
-        
-        let query = HKObserverQuery(sampleType: sampleType!, predicate: nil) {
-            query, completionHandler, error in
-            
-            self.fetchLatestHeartRateSample(completion: { sample in
-              guard let sample = sample else {
-                return
-              }
-              DispatchQueue.main.async {
-                let heartRateUnit = HKUnit(from: "count/min")
-                let heartRate = sample
-                  .quantity
-                  .doubleValue(for: heartRateUnit)
-
-                self.heartRateLabel.setText("\(Int(heartRate))")
-                self.heartRate = "\(Int(heartRate))"
-              }
-            })
-        }
-         
-        healthStore.execute(query)
     }
     
-    public func fetchLatestHeartRateSample(
-      completion: @escaping (_ sample: HKQuantitySample?) -> Void) {
+    func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {
+        print("GET DATA: \(Date())")
+        for type in collectedTypes {
+            guard let quantityType = type as? HKQuantityType else {
+                return
+            }
+            
+            if let statistics = workoutBuilder.statistics(for: quantityType) {
+                handleSendStatisticsData(statistics)
+            }
+        }
+    }
+    
+    func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {
+        
+    }
 
-        guard let sampleType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {
-            completion(nil)
+    private func handleSendStatisticsData(_ statistics: HKStatistics) {
+        switch statistics.quantityType {
+        case HKQuantityType.quantityType(forIdentifier: .heartRate):
+            let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
+            let value = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit)
+            self.heartRate = Double( round( 1 * value! ) / 1 )
+            
+        default:
             return
         }
-
-        let predicate = HKQuery.predicateForSamples(withStart: Date.distantPast,
-                                                    end: Date(),
-                                                    options: .strictEndDate)
-
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate,
-                                              ascending: false)
-
-        let query = HKSampleQuery(sampleType: sampleType,
-                                  predicate: predicate,
-                                  limit: Int(HKObjectQueryNoLimit),
-                                  sortDescriptors: [sortDescriptor]) { (_, results, error) in
-                                    
-                                    guard error == nil else {
-                                        print("Error: \(error!.localizedDescription)")
-                                        return
-                                        
-                                    }
-                                    
-                                    if let result = results, result.count > 0 {
-                                        completion(results?[0] as? HKQuantitySample)
-                                    }
-                                    else {
-                                        completion(nil)
-                                    }
-                                    
-        }
-
-        self.healthStore.execute(query)
     }
 }

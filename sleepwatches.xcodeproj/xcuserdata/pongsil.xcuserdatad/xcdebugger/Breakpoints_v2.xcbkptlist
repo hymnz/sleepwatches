@@ -1,22 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "938BABB1-3EBF-4BA3-83C4-84A62E0004FA"
+   uuid = "60E688A3-47E5-4F06-960A-8DB0493A06D6"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6C48C7F1-EBDA-4AAE-AAE1-434CE91EC9A2"
+            uuid = "04C0C0F3-F485-4FFA-B5E7-37CE30460310"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "sleepwatches WatchKit Extension/util/NSURLRequest+Certificate.swift"
+            filePath = "sleepwatches WatchKit Extension/util/TrackModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "allowsAnyHTTPSCertificate(forHost:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "encode(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E580F4B-B76A-4F47-99CD-B5F171D43305"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sleepwatches WatchKit Extension/util/TrackModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init(coder:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5D3B040-6ECA-43A0-AAAE-73C637C975D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sleepwatches WatchKit Extension/SleepResultController+Sleep.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
+            landmarkName = "requestSleepTrack(result:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -12,8 +12,7 @@ import CoreLocation
 import HealthKit
 import CoreMotion
 
-class InterfaceController: WKInterfaceController {
-    
+class InterfaceController: WKInterfaceController,WatchKitConnectionDelegate {
     let healthStore = HKHealthStore()
     var workoutSession : HKWorkoutSession?
     var builder : HKLiveWorkoutBuilder?
@@ -22,137 +21,100 @@ class InterfaceController: WKInterfaceController {
     let motionManager = CMMotionManager()
     
     var timerValidateSession = Timer()
-    var apiNetwork : Network!
     
+    @IBOutlet weak var intervalLabel: WKInterfaceLabel!
     @IBOutlet weak var heartRateLabel: WKInterfaceLabel!
-    @IBOutlet weak var gpsLabel: WKInterfaceLabel!
-    @IBOutlet weak var speedLabel: WKInterfaceLabel!
-    @IBOutlet weak var altitudeLabel: WKInterfaceLabel!
-    @IBOutlet weak var acceleroXLabel: WKInterfaceLabel!
-    @IBOutlet weak var acceleroYLabel: WKInterfaceLabel!
-    @IBOutlet weak var acceleroZLabel: WKInterfaceLabel!
-    @IBOutlet weak var gyroXLabel: WKInterfaceLabel!
-    @IBOutlet weak var gyroYLabel: WKInterfaceLabel!
-    @IBOutlet weak var gyroZLabel: WKInterfaceLabel!
+    @IBOutlet weak var startButton: WKInterfaceButton!
+    @IBOutlet weak var stopButton: WKInterfaceButton!
+    
     
     var id = ""
-    var heartRate = ""
-    var latitude = ""
-    var longitude = ""
-    var speed = ""
-    var altitude = ""
-    var acceleroX = ""
-    var acceleroY = ""
-    var acceleroZ = ""
-    var gyroX = ""
-    var gyroY = ""
-    var gyroZ = ""
+    var heartRate :Double? = nil
+    var location :CLLocation? = nil
+    var altitude :Int? = nil
+    var accelero :CMAcceleration? = nil
+    var gyro :CMRotationRate? = nil
+    
+    var timeInterval :TimeInterval = 5
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        self.apiNetwork = Network(host: Constant.HOST )
         
-        motionManager.gyroUpdateInterval = 1
-        motionManager.accelerometerUpdateInterval = 1
-        
+        WatchKitConnection.shared.startSession()
+        WatchKitConnection.shared.delegate = self
     }
     
-    override func willActivate() {
-        super.willActivate()
+    func didReceiveInterval(_ interval: String) {
+        self.timeInterval = TimeInterval(Int(interval) ?? 5)
+    }
+    
+    @IBAction func startAction() {
+        self.startButton.setHidden(true)
+        self.stopButton.setHidden(false)
         
         checkLocationServices()
         startTrackingAltitudeChanges()
-        startTrackingAccelerometerChanges()
-        startTrackingGyroChanges()
+        startTrackingMotionChanges()
         startTrackingHeartRate()
-        
-        startValidateSession()
+
+        startDataTimer()
     }
     
-    override func didDeactivate() {
-        super.didDeactivate()
+    @IBAction func stopAction() {
+        self.startButton.setHidden(false)
+        self.stopButton.setHidden(true)
         
-//        self.locationManager.stopUpdatingLocation()
-//        self.altimeter.stopRelativeAltitudeUpdates()
-//        self.motionManager.stopAccelerometerUpdates()
-//
-//        self.builder?.endCollection(withEnd: Date(), completion: { (success, error) in
-//
-//        })
-//        self.builder?.finishWorkout(completion: { (workout, error) in
-//
-//        })
-//        self.workoutSession?.end()
-//
-//        self.stopValidateSession()
+        self.locationManager.stopUpdatingLocation()
+        self.altimeter.stopRelativeAltitudeUpdates()
+        self.motionManager.stopAccelerometerUpdates()
+
+        self.builder?.endCollection(withEnd: Date(), completion: { (success, error) in
+
+        })
+        self.builder?.finishWorkout(completion: { (workout, error) in
+
+        })
+        self.workoutSession?.end()
+
+        self.stopDataTimer()
     }
 
-    func stopValidateSession() {
+    func stopDataTimer() {
         if timerValidateSession.isValid{
             timerValidateSession.invalidate()
         }
+        self.intervalLabel.setHidden(true)
     }
     
-    func startValidateSession() {
-        self.stopValidateSession()
-        timerValidateSession = Timer.scheduledTimer(timeInterval: Constant.TIME_INTERVAL, target: self, selector: #selector(requestDailyTrack), userInfo: nil, repeats: true);
+    func startDataTimer() {
+        self.stopDataTimer()
+        self.intervalLabel.setText("\(self.timeInterval)")
+        self.intervalLabel.setHidden(false)
+        timerValidateSession = Timer.scheduledTimer(timeInterval: self.timeInterval, target: self, selector: #selector(sendDataToPhone), userInfo: nil, repeats: true);
     }
     
-    func encrypt(_ string:String) -> String {               // 16 bytes for AES128
-        let aes256 = AES(key: Constant.KEY256, iv: Constant.IV)
-        let encryptedPassword256 = aes256?.encrypt(string: string)
-        return encryptedPassword256?.base64EncodedString() ?? ""
-    }
-    
-    @objc func requestDailyTrack() {
-        
-        var param :[String:Any] = ["userId": UUIDGenerator.sharedInstance.string]
-        param["ts"] = Date().timeIntervalSince1970
-        
+    @objc func sendDataToPhone() {
+
         var payload :[String:Any] = [:]
         
-        if (!heartRate.isEmpty) {
-            payload["hr"] = encrypt(heartRate)
+        if let heartRate = self.heartRate {
+            payload["hr"] = heartRate
         }
-        
-        if (!longitude.isEmpty && !latitude.isEmpty) {
-            payload["geo"] = ["long":encrypt(longitude),"lat":encrypt(latitude)]
+        if let location = self.location {
+            payload["geo"] = ["long":location.coordinate.longitude,"lat":location.coordinate.latitude]
+            payload["speed"] = location.speed
         }
-        
-        if (!acceleroX.isEmpty && !acceleroY.isEmpty && !acceleroZ.isEmpty) {
-            payload["acc"] = ["x":encrypt(acceleroX),"y":encrypt(acceleroY),"z":encrypt(acceleroZ)]
+        if let accelero = self.accelero {
+            payload["acc"] = ["x":accelero.x,"y":accelero.y,"z":accelero.z]
         }
-        
-        if (!gyroX.isEmpty && !gyroY.isEmpty && !gyroZ.isEmpty) {
-            payload["gyr"] = ["x":encrypt(gyroX),"y":encrypt(gyroY),"z":encrypt(gyroZ)]
+        if let gyro = self.gyro {
+            payload["gyr"] = ["x":gyro.x,"y":gyro.y,"z":gyro.z]
         }
-        
-        if (!speed.isEmpty) {
-            payload["speed"] = encrypt(speed)
+        if let altitude = self.altitude {
+            payload["altitude"] = altitude
         }
-        
-        if (!altitude.isEmpty) {
-            payload["altitude"] = encrypt(altitude)
-        }
-        
-        param["payload"] = payload
-        
-        apiNetwork.post(path: "/daily/track", params: param ){ (data, error) in
-            
-            guard let data = data else {
-                return
-            }
-            
-            guard let httpResponse = data.response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-
-                return
-            }
-            
-            let json:(data: Dictionary<String, Any>?, error: NetworkError?) = data.jsonObject()
-            
-            if let _ = json.error {
-                return
-            }
-        }
+        WatchKitConnection.shared.sendMessage(message: ["trackData":
+        payload as AnyObject])
     }
+    
 }

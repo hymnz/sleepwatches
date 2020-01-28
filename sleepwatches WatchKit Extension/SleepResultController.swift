@@ -25,7 +25,6 @@ class SleepResultController: WKInterfaceController {
         self.startDate = UserDefaults.standard.object(forKey: "startDate") as? Date ?? Date.yesterday
         self.endDate = UserDefaults.standard.object(forKey: "endDate") as? Date ?? Date()
         
-        self.apiNetwork = Network(host: Constant.HOST)
     }
     
     override func willActivate() {

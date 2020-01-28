@@ -18,12 +18,7 @@ extension InterfaceController: CLLocationManagerDelegate{
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         self.locationManager.allowsBackgroundLocationUpdates = true
-//        self.altitudeLabel.setText("-")
-        self.speedLabel.setText("-")
-        self.gpsLabel.setText("-")
-        self.speed = ""
-        self.latitude = ""
-        self.longitude = ""
+        self.location = nil
     }
     
     func checkLocationServices() {
@@ -35,20 +30,12 @@ extension InterfaceController: CLLocationManagerDelegate{
     
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
-        case .authorizedWhenInUse:
+        case .authorizedWhenInUse,.authorizedAlways:
             locationManager.startUpdatingLocation()
-            break
-        case .denied:
-            // Show alert instructing them how to turn on permissions
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
-        case .restricted:
-            // Show an alert letting them know what's up
-            break
-        case .authorizedAlways:
-            break
-        @unknown default:
+        default:
             break
         }
     }
@@ -57,21 +44,8 @@ extension InterfaceController: CLLocationManagerDelegate{
         
         guard let location = locations.last else { return }
         
-//        let altitude = location.altitude.roundToDecimal(2)
-//        altitudeLabel.setText("\(Int(altitude))m")
-        
-        gpsLabel.setText("\(location.coordinate.latitude.roundToDecimal(4)),\(location.coordinate.longitude.roundToDecimal(4))")
-        latitude = "\(location.coordinate.latitude.roundToDecimal(4))"
-        longitude = "\(location.coordinate.longitude.roundToDecimal(4))"
-        
-        if location.speed >= 0 {
-            speedLabel.setText("\((location.speed * 3.6 ).roundToDecimal(2))")
-            speed = "\((location.speed * 3.6 ).roundToDecimal(2))"
-        }
-        else {
-            speedLabel.setText("-")
-            speed = ""
-        }
+        self.location = location
+
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

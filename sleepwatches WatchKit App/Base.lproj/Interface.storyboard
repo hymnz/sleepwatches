@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15505" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
     </dependencies>
     <scenes>
@@ -14,108 +14,52 @@
                         <label alignment="left" text="Heart Rate" id="p6N-iV-Xu8">
                             <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
-                        <group width="1" alignment="center" spacing="5" id="2X8-Ju-8BZ">
+                        <group width="1" alignment="center" verticalAlignment="center" spacing="10" id="2X8-Ju-8BZ">
                             <items>
                                 <group alignment="left" layout="vertical" id="8xg-Jk-jBh">
                                     <items>
                                         <label alignment="left" text="BPM" id="N5T-XJ-58o">
                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="24"/>
                                         </label>
                                         <imageView alignment="left" image="heart" id="XLd-yy-0aD"/>
                                     </items>
                                 </group>
                                 <label alignment="left" verticalAlignment="center" numberOfLines="0" minimumScaleFactor="0.20000000000000001" id="U5w-yU-Qpd">
-                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                    <fontDescription key="font" type="system" pointSize="34"/>
                                 </label>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="Lfv-KW-bwx">
+                        <group width="1" alignment="center" verticalAlignment="center" id="OMz-Lb-c5T">
                             <items>
-                                <label alignment="left" text="GPS : " id="25Y-lR-YNI">
+                                <label alignment="left" text="Interval : " id="OGd-9P-Ltu">
                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="14"/>
                                 </label>
-                                <label alignment="left" minimumScaleFactor="0.10000000000000001" id="wtI-YK-Qph">
-                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                <label alignment="left" text="-" id="RUh-EU-LQF">
+                                    <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </label>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="99E-yj-cTu">
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="mwq-20-oaa">
                             <items>
-                                <label alignment="left" text="Speed : " id="ZIA-sP-zWW">
-                                    <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                </label>
-                                <label alignment="left" minimumScaleFactor="0.10000000000000001" id="HC7-ap-UM6">
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                </label>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="NnN-9I-8EJ">
-                            <items>
-                                <label alignment="left" text="Altitude : " id="ejR-R0-gwC">
-                                    <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                </label>
-                                <label alignment="left" minimumScaleFactor="0.10000000000000001" id="pXI-yV-gvM">
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                </label>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" layout="vertical" id="ERL-2a-jR4">
-                            <items>
-                                <label alignment="left" text="Accelerometer : " id="2K7-5f-OZf" userLabel="Accelerometer :">
-                                    <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                </label>
-                                <group width="1" alignment="left" id="sUO-1k-KoK">
-                                    <items>
-                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="p2O-Xw-FTv">
-                                            <fontDescription key="font" type="system" pointSize="14"/>
-                                        </label>
-                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="Jx4-dX-nXH">
-                                            <fontDescription key="font" type="system" pointSize="14"/>
-                                        </label>
-                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="5PC-0o-ZjR">
-                                            <fontDescription key="font" type="system" pointSize="14"/>
-                                        </label>
-                                    </items>
-                                </group>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" layout="vertical" id="1sH-M0-SiD">
-                            <items>
-                                <label alignment="left" text="Gyroscope : " id="HU7-Wf-llA" userLabel="Accelerometer :">
-                                    <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                </label>
-                                <group width="1" alignment="left" id="0IU-5f-j11">
-                                    <items>
-                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="krL-T7-Z00">
-                                            <fontDescription key="font" type="system" pointSize="14"/>
-                                        </label>
-                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="Pxl-ih-oCq">
-                                            <fontDescription key="font" type="system" pointSize="14"/>
-                                        </label>
-                                        <label width="0.33000000000000002" alignment="left" minimumScaleFactor="0.10000000000000001" id="cka-Kc-go7">
-                                            <fontDescription key="font" type="system" pointSize="14"/>
-                                        </label>
-                                    </items>
-                                </group>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="Start" id="MQx-nz-5sa">
+                                    <connections>
+                                        <action selector="startAction" destination="AgC-eL-Hgc" id="16j-Kr-ygK"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="End" id="aaR-BI-cv5">
+                                    <connections>
+                                        <action selector="stopAction" destination="AgC-eL-Hgc" id="LmE-49-Nu1"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="acceleroXLabel" destination="p2O-Xw-FTv" id="d27-Tb-Wod"/>
-                        <outlet property="acceleroYLabel" destination="Jx4-dX-nXH" id="sEo-cy-2tz"/>
-                        <outlet property="acceleroZLabel" destination="5PC-0o-ZjR" id="BZy-JU-0cn"/>
-                        <outlet property="altitudeLabel" destination="pXI-yV-gvM" id="zDe-2d-ir1"/>
-                        <outlet property="gpsLabel" destination="wtI-YK-Qph" id="iOw-A3-jYW"/>
-                        <outlet property="gyroXLabel" destination="krL-T7-Z00" id="EvK-pz-Nwt"/>
-                        <outlet property="gyroYLabel" destination="Pxl-ih-oCq" id="xDX-kc-ust"/>
-                        <outlet property="gyroZLabel" destination="cka-Kc-go7" id="SrO-Ic-Ykg"/>
                         <outlet property="heartRateLabel" destination="U5w-yU-Qpd" id="Xlf-Z8-DfN"/>
-                        <outlet property="speedLabel" destination="HC7-ap-UM6" id="fNz-Pe-QRB"/>
+                        <outlet property="intervalLabel" destination="RUh-EU-LQF" id="3ek-Ss-hQs"/>
+                        <outlet property="startButton" destination="MQx-nz-5sa" id="Fbh-8R-g1g"/>
+                        <outlet property="stopButton" destination="aaR-BI-cv5" id="CDd-Cy-9gV"/>
                         <segue destination="o2c-aP-Xzj" kind="relationship" relationship="nextPage" id="ekk-Ln-AJb"/>
                     </connections>
                 </controller>
@@ -212,6 +156,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" width="20" height="18"/>
+        <image name="heart" width="30" height="27"/>
     </resources>
 </document>

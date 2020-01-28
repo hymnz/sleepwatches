@@ -7,6 +7,7 @@
 //
 
 import HealthKit
+import CoreMotion
 
 extension SleepResultController {
     
@@ -18,37 +19,58 @@ extension SleepResultController {
             guard success == true else {
                 return
             }
-            
-            self.saveSleepAnalysis()
         }
+        
+        self.saveSleepAnalysis()
+        
     }
     
     func saveSleepAnalysis() {
+        
+        
+        let manager = CMMotionActivityManager()
+//        let calendar = Calendar.current
+//
+//        let startDate = calendar.date(byAdding: .hour, value: -13, to: Date.yesterday) ?? Date()
+//        let date = calendar.date(byAdding: .hour, value: -4, to: Date.yesterday) ?? Date()
+        
+        manager.queryActivityStarting(from: startDate, to: endDate, to: .main){ activities, error in
+            var lastSleepDate: Date? = nil
+            var lastAwakeDate: Date? = nil
+
+            self.saveSleepAnalysis(type: HKCategoryValueSleepAnalysis.inBed.rawValue, start: self.startDate, end: self.endDate)
+            
+            activities?.forEach { activity in
+                if activity.stationary {
+                    if lastSleepDate == nil {
+                        lastSleepDate = activity.startDate
+                    }
+                    lastAwakeDate = nil
+                } else {
+                    if let startDate = lastSleepDate {
+                        self.saveSleepAnalysis(type: HKCategoryValueSleepAnalysis.asleep.rawValue, start: startDate, end: activity.startDate)
+                        lastSleepDate = nil
+                    }
+                    lastAwakeDate = activity.startDate
+                }
+            }
+            if let startDate = lastSleepDate {
+                self.saveSleepAnalysis(type: HKCategoryValueSleepAnalysis.asleep.rawValue, start: startDate, end: self.endDate)
+            }
+            if let startDate = lastAwakeDate {
+                self.saveSleepAnalysis(type: HKCategoryValueSleepAnalysis.awake.rawValue, start: startDate, end: self.endDate)
+            }
+            
+            self.retrieveSleepAnalysis()
+            
+        }
+    }
+    
+    func saveSleepAnalysis(type: Int, start startDate: Date, end endDate: Date) {
 
         if let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis) {
-            
-            let dispatchGroup = DispatchGroup()
-            
-            dispatchGroup.enter()
-            let inBed = HKCategorySample(type: sleepType, value: HKCategoryValueSleepAnalysis.inBed.rawValue, start: self.startDate, end: self.endDate)
-            healthStore.save(inBed) { (success, error) in
-                dispatchGroup.leave()
-            }
-            
-            dispatchGroup.enter()
-            let asleep = HKCategorySample(type: sleepType, value: HKCategoryValueSleepAnalysis.asleep.rawValue, start: self.startDate, end: self.endDate)
-            healthStore.save(asleep) { (success, error) in
-                dispatchGroup.leave()
-            }
-            
-            dispatchGroup.enter()
-            let awake = HKCategorySample(type: sleepType, value: HKCategoryValueSleepAnalysis.awake.rawValue, start: self.startDate, end: self.endDate)
-            healthStore.save(awake) { (success, error) in
-                dispatchGroup.leave()
-            }
-            
-            dispatchGroup.notify(queue: .main) {
-                self.retrieveSleepAnalysis()
+            let sample = HKCategorySample(type: sleepType, value: type, start: startDate, end: endDate)
+                healthStore.save(sample) { (success, error) in
             }
         }
     }
@@ -61,7 +83,7 @@ extension SleepResultController {
             
             let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
             
-            let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: 10000, sortDescriptors: [sortDescriptor]) { (query, tmpResult, error) -> Void in
+            let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: [sortDescriptor]) { (query, tmpResult, error) -> Void in
                 
                 if error != nil {
                     self.errorLabel.setHidden(false)
@@ -86,11 +108,57 @@ extension SleepResultController {
             if let sample = item as? HKCategorySample {
                               
                 if let row = resultTable.rowController(at: i) as? SleepRow {
-                    let value = (sample.value == HKCategoryValueSleepAnalysis.inBed.rawValue) ? "InBed" : "Asleep"
+                    var value = "Unknow"
+                    switch sample.value {
+                    case HKCategoryValueSleepAnalysis.inBed.rawValue:
+                        value = "InBed"
+                    case HKCategoryValueSleepAnalysis.asleep.rawValue:
+                        value = "Asleep"
+                    case HKCategoryValueSleepAnalysis.awake.rawValue:
+                        value = "Awake"
+                    default:
+                        value = "Unknow"
+                    }
+
                     row.titleLabel.setText(value)
                     
                     row.startLabel.setText("Start : \(sample.startDate.toCurrentTimeZoneString())")
                     row.endLabel.setText("End : \(sample.endDate.toCurrentTimeZoneString())")
+                }
+            }
+        }
+    }
+    
+    func requestSleepTrack(result:[HKSample]) {
+        
+        apiNetwork = Network(host: WatchKitConnection.shared.host)
+        
+        for (i,item) in result.enumerated() {
+            if let sample = item as? HKCategorySample {
+                              
+                if let row = resultTable.rowController(at: i) as? SleepRow {
+                    var value = "Unknow"
+                    switch sample.value {
+                    case HKCategoryValueSleepAnalysis.inBed.rawValue:
+                        value = "InBed"
+                    case HKCategoryValueSleepAnalysis.asleep.rawValue:
+                        value = "Asleep"
+                    case HKCategoryValueSleepAnalysis.awake.rawValue:
+                        value = "Awake"
+                    default:
+                        value = "Unknow"
+                    }
+                    row.titleLabel.setText(value)
+                    
+                    row.startLabel.setText("Start : \(sample.startDate.toCurrentTimeZoneString())")
+                    row.endLabel.setText("End : \(sample.endDate.toCurrentTimeZoneString())")
+            
+                    let track :[String:Any] = ["userId": UUIDGenerator.sharedInstance.string,
+                                               "type": encrypt(value),
+                                               "start": encrypt("\(sample.startDate.toCurrentTimeZoneString())"),
+                                               "end": encrypt("\(sample.endDate.toCurrentTimeZoneString())")]
+                        
+                    self.postSleepTrack(param: track)
                 }
             }
         }
@@ -101,29 +169,6 @@ extension SleepResultController {
         let encryptedPassword256 = aes256?.encrypt(string: string)
 
         return encryptedPassword256?.base64EncodedString() ?? ""
-    }
-    
-    func requestSleepTrack(result:[HKSample]) {
-        
-        for (i,item) in result.enumerated() {
-            if let sample = item as? HKCategorySample {
-                              
-                if let row = resultTable.rowController(at: i) as? SleepRow {
-                    let value = (sample.value == HKCategoryValueSleepAnalysis.inBed.rawValue) ? "InBed" : "Asleep"
-                    row.titleLabel.setText(value)
-                    
-                    row.startLabel.setText("Start : \(sample.startDate.toCurrentTimeZoneString())")
-                    row.endLabel.setText("End : \(sample.endDate.toCurrentTimeZoneString())")
-                    
-                    let track :[String:Any] = ["userId": UUIDGenerator.sharedInstance.string,
-                                               "type": encrypt(value),
-                                               "start": encrypt("\(sample.startDate.toCurrentTimeZoneString())"),
-                                               "end": encrypt("\(sample.endDate.toCurrentTimeZoneString())")]
-                        
-                    self.postSleepTrack(param: track)
-                }
-            }
-        }
     }
     
     func postSleepTrack(param: [String:Any]) {
@@ -146,4 +191,5 @@ extension SleepResultController {
             }
         }
     }
+
 }

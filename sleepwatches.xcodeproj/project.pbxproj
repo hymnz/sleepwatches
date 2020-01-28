@@ -7,69 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A5031E5239C168800A1CD1C /* Date+Next.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5031E4239C168800A1CD1C /* Date+Next.swift */; };
-		0A5031EA239C16D200A1CD1C /* SleepRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5031E6239C16D100A1CD1C /* SleepRow.swift */; };
-		0A5031EB239C16D200A1CD1C /* SleepResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5031E7239C16D100A1CD1C /* SleepResultController.swift */; };
-		0A5031EC239C16D200A1CD1C /* SleepResultController+Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5031E8239C16D100A1CD1C /* SleepResultController+Sleep.swift */; };
-		0A5031ED239C16D200A1CD1C /* SleepTrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5031E9239C16D100A1CD1C /* SleepTrackController.swift */; };
-		0A6A477F23B678E400BAF679 /* NSURLRequest+Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A477E23B678E400BAF679 /* NSURLRequest+Certificate.swift */; };
-		0A852032239FBADD004593C3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A852031239FBADD004593C3 /* Network.swift */; };
-		0A852035239FBB4B004593C3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A852033239FBB4B004593C3 /* NetworkError.swift */; };
-		0A852036239FBB4B004593C3 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A852034239FBB4B004593C3 /* NetworkResponse.swift */; };
-		0A852038239FBB52004593C3 /* JsonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A852037239FBB52004593C3 /* JsonError.swift */; };
-		0A85203C239FC9B5004593C3 /* UUIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85203B239FC9B5004593C3 /* UUIDGenerator.swift */; };
-		0A85203E239FD017004593C3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85203D239FD017004593C3 /* Constant.swift */; };
-		0ADAEBE123900B38009D8629 /* sleepwatches WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0ADAEBE023900B38009D8629 /* sleepwatches WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0ADAEBE723900B38009D8629 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADAEBE523900B38009D8629 /* Interface.storyboard */; };
-		0ADAEBE923900B39009D8629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADAEBE823900B39009D8629 /* Assets.xcassets */; };
-		0ADAEBF023900B39009D8629 /* sleepwatches WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0ADAEBEF23900B39009D8629 /* sleepwatches WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0ADAEBF523900B39009D8629 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEBF423900B39009D8629 /* InterfaceController.swift */; };
-		0ADAEBF723900B39009D8629 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEBF623900B39009D8629 /* ExtensionDelegate.swift */; };
-		0ADAEBF923900B39009D8629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADAEBF823900B39009D8629 /* Assets.xcassets */; };
-		0ADAEC0E23900BD4009D8629 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEC0823900BD4009D8629 /* AES.swift */; };
-		0ADAEC0F23900BD4009D8629 /* InterfaceController+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEC0923900BD4009D8629 /* InterfaceController+Location.swift */; };
-		0ADAEC1023900BD4009D8629 /* InterfaceController+Motion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEC0A23900BD4009D8629 /* InterfaceController+Motion.swift */; };
-		0ADAEC1123900BD4009D8629 /* InterfaceController+Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEC0B23900BD4009D8629 /* InterfaceController+Health.swift */; };
-		0ADAEC1323900BD4009D8629 /* Double+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAEC0D23900BD4009D8629 /* Double+Round.swift */; };
-		0ADAEC1923900CE8009D8629 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADAEC1823900CE8009D8629 /* HealthKit.framework */; };
+		0A4066BF23DACC890085DEC6 /* WatchKitConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4066BE23DACC890085DEC6 /* WatchKitConnection.swift */; };
+		0A4066C423DAFE570085DEC6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4066C323DAFE570085DEC6 /* HealthKit.framework */; };
+		0A66964123D8B8B200C40A3F /* Date+Next.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8F323D608B000467AB9 /* Date+Next.swift */; };
+		0A7FDB0823E0800D000B89B8 /* UUIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FDB0023E0800D000B89B8 /* UUIDGenerator.swift */; };
+		0A7FDB0923E0800D000B89B8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FDB0123E0800D000B89B8 /* Network.swift */; };
+		0A7FDB0A23E0800D000B89B8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FDB0223E0800D000B89B8 /* Constant.swift */; };
+		0A7FDB0B23E0800D000B89B8 /* NSURLRequest+Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FDB0323E0800D000B89B8 /* NSURLRequest+Certificate.swift */; };
+		0A7FDB0C23E0800D000B89B8 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FDB0423E0800D000B89B8 /* NetworkResponse.swift */; };
+		0A7FDB0D23E0800D000B89B8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FDB0523E0800D000B89B8 /* NetworkError.swift */; };
+		0A7FDB0E23E0800D000B89B8 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FDB0623E0800D000B89B8 /* AES.swift */; };
+		0A7FDB0F23E0800D000B89B8 /* JsonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FDB0723E0800D000B89B8 /* JsonError.swift */; };
+		0ACA24C523E019B6007102DD /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA24BC23E019B6007102DD /* NetworkResponse.swift */; };
+		0ACA24C623E019B6007102DD /* UUIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA24BD23E019B6007102DD /* UUIDGenerator.swift */; };
+		0ACA24C723E019B6007102DD /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA24BE23E019B6007102DD /* Constant.swift */; };
+		0ACA24C823E019B6007102DD /* JsonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA24BF23E019B6007102DD /* JsonError.swift */; };
+		0ACA24C923E019B6007102DD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA24C023E019B6007102DD /* Network.swift */; };
+		0ACA24CA23E019B6007102DD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA24C123E019B6007102DD /* NetworkError.swift */; };
+		0ACA24CB23E019B6007102DD /* NSURLRequest+Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA24C223E019B6007102DD /* NSURLRequest+Certificate.swift */; };
+		0ACA24CC23E019B6007102DD /* WatchKitConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA24C323E019B6007102DD /* WatchKitConnection.swift */; };
+		0ACA24CD23E019B6007102DD /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA24C423E019B6007102DD /* AES.swift */; };
+		0AD5A8AF23D607AD00467AB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8AE23D607AD00467AB9 /* AppDelegate.swift */; };
+		0AD5A8B123D607AD00467AB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8B023D607AD00467AB9 /* SceneDelegate.swift */; };
+		0AD5A8B323D607AD00467AB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8B223D607AD00467AB9 /* ViewController.swift */; };
+		0AD5A8B623D607AD00467AB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD5A8B423D607AD00467AB9 /* Main.storyboard */; };
+		0AD5A8B823D607AE00467AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD5A8B723D607AE00467AB9 /* Assets.xcassets */; };
+		0AD5A8BB23D607AE00467AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD5A8B923D607AE00467AB9 /* LaunchScreen.storyboard */; };
+		0AD5A8C023D607AE00467AB9 /* sleepwatches WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0AD5A8BF23D607AE00467AB9 /* sleepwatches WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0AD5A8C623D607AE00467AB9 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD5A8C423D607AE00467AB9 /* Interface.storyboard */; };
+		0AD5A8C823D607AF00467AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD5A8C723D607AF00467AB9 /* Assets.xcassets */; };
+		0AD5A8CF23D607AF00467AB9 /* sleepwatches WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0AD5A8CE23D607AF00467AB9 /* sleepwatches WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0AD5A8D423D607AF00467AB9 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8D323D607AF00467AB9 /* InterfaceController.swift */; };
+		0AD5A8D623D607AF00467AB9 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8D523D607AF00467AB9 /* ExtensionDelegate.swift */; };
+		0AD5A8D823D607AF00467AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD5A8D723D607AF00467AB9 /* Assets.xcassets */; };
+		0AD5A8FA23D608B000467AB9 /* SleepResultController+Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8E723D608B000467AB9 /* SleepResultController+Sleep.swift */; };
+		0AD5A8FB23D608B000467AB9 /* SleepRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8E823D608B000467AB9 /* SleepRow.swift */; };
+		0AD5A8FD23D608B000467AB9 /* InterfaceController+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8EA23D608B000467AB9 /* InterfaceController+Location.swift */; };
+		0AD5A8FE23D608B000467AB9 /* InterfaceController+Motion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8EB23D608B000467AB9 /* InterfaceController+Motion.swift */; };
+		0AD5A8FF23D608B000467AB9 /* SleepResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8EC23D608B000467AB9 /* SleepResultController.swift */; };
+		0AD5A90523D608B000467AB9 /* Date+Next.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8F323D608B000467AB9 /* Date+Next.swift */; };
+		0AD5A90623D608B000467AB9 /* Double+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8F423D608B000467AB9 /* Double+Round.swift */; };
+		0AD5A90A23D608B000467AB9 /* SleepTrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8F823D608B000467AB9 /* SleepTrackController.swift */; };
+		0AD5A90B23D608B000467AB9 /* InterfaceController+Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD5A8F923D608B000467AB9 /* InterfaceController+Health.swift */; };
+		0AD5A90F23D6097200467AB9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD5A90E23D6097200467AB9 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0ADAEBE223900B38009D8629 /* PBXContainerItemProxy */ = {
+		0AD5A8C123D607AE00467AB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0ADAEBD623900B38009D8629 /* Project object */;
+			containerPortal = 0AD5A8A323D607AD00467AB9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0ADAEBDF23900B38009D8629;
+			remoteGlobalIDString = 0AD5A8BE23D607AE00467AB9;
 			remoteInfo = "sleepwatches WatchKit App";
 		};
-		0ADAEBF123900B39009D8629 /* PBXContainerItemProxy */ = {
+		0AD5A8D023D607AF00467AB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0ADAEBD623900B38009D8629 /* Project object */;
+			containerPortal = 0AD5A8A323D607AD00467AB9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0ADAEBEE23900B39009D8629;
+			remoteGlobalIDString = 0AD5A8CD23D607AF00467AB9;
 			remoteInfo = "sleepwatches WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0ADAEC0023900B3A009D8629 /* Embed App Extensions */ = {
+		0AD5A8DF23D607AF00467AB9 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0ADAEBF023900B39009D8629 /* sleepwatches WatchKit Extension.appex in Embed App Extensions */,
+				0AD5A8CF23D607AF00467AB9 /* sleepwatches WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0ADAEC0423900B3A009D8629 /* Embed Watch Content */ = {
+		0AD5A8E323D607AF00467AB9 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				0ADAEBE123900B38009D8629 /* sleepwatches WatchKit App.app in Embed Watch Content */,
+				0AD5A8C023D607AE00467AB9 /* sleepwatches WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,122 +95,184 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0A5031E4239C168800A1CD1C /* Date+Next.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Next.swift"; sourceTree = "<group>"; };
-		0A5031E6239C16D100A1CD1C /* SleepRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepRow.swift; sourceTree = "<group>"; };
-		0A5031E7239C16D100A1CD1C /* SleepResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepResultController.swift; sourceTree = "<group>"; };
-		0A5031E8239C16D100A1CD1C /* SleepResultController+Sleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepResultController+Sleep.swift"; sourceTree = "<group>"; };
-		0A5031E9239C16D100A1CD1C /* SleepTrackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepTrackController.swift; sourceTree = "<group>"; };
-		0A6A477E23B678E400BAF679 /* NSURLRequest+Certificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLRequest+Certificate.swift"; sourceTree = "<group>"; };
-		0A852031239FBADD004593C3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		0A852033239FBB4B004593C3 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		0A852034239FBB4B004593C3 /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
-		0A852037239FBB52004593C3 /* JsonError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonError.swift; sourceTree = "<group>"; };
-		0A85203B239FC9B5004593C3 /* UUIDGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDGenerator.swift; sourceTree = "<group>"; };
-		0A85203D239FD017004593C3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		0ADAEBDC23900B38009D8629 /* sleepwatches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sleepwatches.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ADAEBE023900B38009D8629 /* sleepwatches WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sleepwatches WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ADAEBE623900B38009D8629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		0ADAEBE823900B39009D8629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0ADAEBEA23900B39009D8629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0ADAEBEF23900B39009D8629 /* sleepwatches WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "sleepwatches WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ADAEBF423900B39009D8629 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		0ADAEBF623900B39009D8629 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		0ADAEBF823900B39009D8629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0ADAEBFA23900B39009D8629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0ADAEC0823900BD4009D8629 /* AES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
-		0ADAEC0923900BD4009D8629 /* InterfaceController+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InterfaceController+Location.swift"; sourceTree = "<group>"; };
-		0ADAEC0A23900BD4009D8629 /* InterfaceController+Motion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InterfaceController+Motion.swift"; sourceTree = "<group>"; };
-		0ADAEC0B23900BD4009D8629 /* InterfaceController+Health.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InterfaceController+Health.swift"; sourceTree = "<group>"; };
-		0ADAEC0D23900BD4009D8629 /* Double+Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Round.swift"; sourceTree = "<group>"; };
-		0ADAEC1523900CBF009D8629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0ADAEC1623900CE8009D8629 /* sleepwatches WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "sleepwatches WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		0ADAEC1823900CE8009D8629 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		0A4066BE23DACC890085DEC6 /* WatchKitConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchKitConnection.swift; sourceTree = "<group>"; };
+		0A4066C223DAFE570085DEC6 /* sleepwatches.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sleepwatches.entitlements; sourceTree = "<group>"; };
+		0A4066C323DAFE570085DEC6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		0A7FDB0023E0800D000B89B8 /* UUIDGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UUIDGenerator.swift; path = sleepwatches/util/UUIDGenerator.swift; sourceTree = SOURCE_ROOT; };
+		0A7FDB0123E0800D000B89B8 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = sleepwatches/util/Network.swift; sourceTree = SOURCE_ROOT; };
+		0A7FDB0223E0800D000B89B8 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = sleepwatches/util/Constant.swift; sourceTree = SOURCE_ROOT; };
+		0A7FDB0323E0800D000B89B8 /* NSURLRequest+Certificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSURLRequest+Certificate.swift"; path = "sleepwatches/util/NSURLRequest+Certificate.swift"; sourceTree = SOURCE_ROOT; };
+		0A7FDB0423E0800D000B89B8 /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkResponse.swift; path = sleepwatches/util/NetworkResponse.swift; sourceTree = SOURCE_ROOT; };
+		0A7FDB0523E0800D000B89B8 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkError.swift; path = sleepwatches/util/NetworkError.swift; sourceTree = SOURCE_ROOT; };
+		0A7FDB0623E0800D000B89B8 /* AES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AES.swift; path = sleepwatches/util/AES.swift; sourceTree = SOURCE_ROOT; };
+		0A7FDB0723E0800D000B89B8 /* JsonError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonError.swift; path = sleepwatches/util/JsonError.swift; sourceTree = SOURCE_ROOT; };
+		0A7FDB1023E083F3000B89B8 /* sleepwatches WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "sleepwatches WatchKit App.entitlements"; sourceTree = "<group>"; };
+		0ACA24BC23E019B6007102DD /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		0ACA24BD23E019B6007102DD /* UUIDGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDGenerator.swift; sourceTree = "<group>"; };
+		0ACA24BE23E019B6007102DD /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0ACA24BF23E019B6007102DD /* JsonError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonError.swift; sourceTree = "<group>"; };
+		0ACA24C023E019B6007102DD /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		0ACA24C123E019B6007102DD /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0ACA24C223E019B6007102DD /* NSURLRequest+Certificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLRequest+Certificate.swift"; sourceTree = "<group>"; };
+		0ACA24C323E019B6007102DD /* WatchKitConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchKitConnection.swift; sourceTree = "<group>"; };
+		0ACA24C423E019B6007102DD /* AES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
+		0AD5A8AB23D607AD00467AB9 /* sleepwatches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sleepwatches.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AD5A8AE23D607AD00467AB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0AD5A8B023D607AD00467AB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0AD5A8B223D607AD00467AB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0AD5A8B523D607AD00467AB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0AD5A8B723D607AE00467AB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AD5A8BA23D607AE00467AB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0AD5A8BC23D607AE00467AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AD5A8BF23D607AE00467AB9 /* sleepwatches WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sleepwatches WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AD5A8C523D607AE00467AB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0AD5A8C723D607AF00467AB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AD5A8C923D607AF00467AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AD5A8CE23D607AF00467AB9 /* sleepwatches WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "sleepwatches WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AD5A8D323D607AF00467AB9 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		0AD5A8D523D607AF00467AB9 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		0AD5A8D723D607AF00467AB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AD5A8D923D607AF00467AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AD5A8E723D608B000467AB9 /* SleepResultController+Sleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepResultController+Sleep.swift"; sourceTree = "<group>"; };
+		0AD5A8E823D608B000467AB9 /* SleepRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepRow.swift; sourceTree = "<group>"; };
+		0AD5A8EA23D608B000467AB9 /* InterfaceController+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InterfaceController+Location.swift"; sourceTree = "<group>"; };
+		0AD5A8EB23D608B000467AB9 /* InterfaceController+Motion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InterfaceController+Motion.swift"; sourceTree = "<group>"; };
+		0AD5A8EC23D608B000467AB9 /* SleepResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepResultController.swift; sourceTree = "<group>"; };
+		0AD5A8F323D608B000467AB9 /* Date+Next.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Next.swift"; sourceTree = "<group>"; };
+		0AD5A8F423D608B000467AB9 /* Double+Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Round.swift"; sourceTree = "<group>"; };
+		0AD5A8F823D608B000467AB9 /* SleepTrackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepTrackController.swift; sourceTree = "<group>"; };
+		0AD5A8F923D608B000467AB9 /* InterfaceController+Health.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InterfaceController+Health.swift"; sourceTree = "<group>"; };
+		0AD5A90C23D6097200467AB9 /* sleepwatches WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "sleepwatches WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		0AD5A90E23D6097200467AB9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0ADAEBEC23900B39009D8629 /* Frameworks */ = {
+		0AD5A8A823D607AD00467AB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ADAEC1923900CE8009D8629 /* HealthKit.framework in Frameworks */,
+				0A4066C423DAFE570085DEC6 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AD5A8CB23D607AF00467AB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AD5A90F23D6097200467AB9 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A5031E3239C167000A1CD1C /* util */ = {
+		0ACA24BB23E01986007102DD /* util */ = {
 			isa = PBXGroup;
 			children = (
-				0A6A477E23B678E400BAF679 /* NSURLRequest+Certificate.swift */,
-				0ADAEC0823900BD4009D8629 /* AES.swift */,
-				0ADAEC0D23900BD4009D8629 /* Double+Round.swift */,
-				0A5031E4239C168800A1CD1C /* Date+Next.swift */,
-				0A852031239FBADD004593C3 /* Network.swift */,
-				0A852033239FBB4B004593C3 /* NetworkError.swift */,
-				0A852034239FBB4B004593C3 /* NetworkResponse.swift */,
-				0A852037239FBB52004593C3 /* JsonError.swift */,
-				0A85203B239FC9B5004593C3 /* UUIDGenerator.swift */,
-				0A85203D239FD017004593C3 /* Constant.swift */,
+				0ACA24C423E019B6007102DD /* AES.swift */,
+				0ACA24BE23E019B6007102DD /* Constant.swift */,
+				0ACA24BF23E019B6007102DD /* JsonError.swift */,
+				0ACA24C023E019B6007102DD /* Network.swift */,
+				0ACA24C123E019B6007102DD /* NetworkError.swift */,
+				0ACA24BC23E019B6007102DD /* NetworkResponse.swift */,
+				0ACA24C223E019B6007102DD /* NSURLRequest+Certificate.swift */,
+				0ACA24BD23E019B6007102DD /* UUIDGenerator.swift */,
+				0ACA24C323E019B6007102DD /* WatchKitConnection.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
 		};
-		0ADAEBD523900B38009D8629 = {
+		0AD5A8A223D607AD00467AB9 = {
 			isa = PBXGroup;
 			children = (
-				0ADAEC1523900CBF009D8629 /* Info.plist */,
-				0ADAEBE423900B38009D8629 /* sleepwatches WatchKit App */,
-				0ADAEBF323900B39009D8629 /* sleepwatches WatchKit Extension */,
-				0ADAEBDD23900B38009D8629 /* Products */,
-				0ADAEC1723900CE8009D8629 /* Frameworks */,
+				0AD5A8AD23D607AD00467AB9 /* sleepwatches */,
+				0AD5A8C323D607AE00467AB9 /* sleepwatches WatchKit App */,
+				0AD5A8D223D607AF00467AB9 /* sleepwatches WatchKit Extension */,
+				0AD5A8AC23D607AD00467AB9 /* Products */,
+				0AD5A90D23D6097200467AB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		0ADAEBDD23900B38009D8629 /* Products */ = {
+		0AD5A8AC23D607AD00467AB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0ADAEBDC23900B38009D8629 /* sleepwatches.app */,
-				0ADAEBE023900B38009D8629 /* sleepwatches WatchKit App.app */,
-				0ADAEBEF23900B39009D8629 /* sleepwatches WatchKit Extension.appex */,
+				0AD5A8AB23D607AD00467AB9 /* sleepwatches.app */,
+				0AD5A8BF23D607AE00467AB9 /* sleepwatches WatchKit App.app */,
+				0AD5A8CE23D607AF00467AB9 /* sleepwatches WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0ADAEBE423900B38009D8629 /* sleepwatches WatchKit App */ = {
+		0AD5A8AD23D607AD00467AB9 /* sleepwatches */ = {
 			isa = PBXGroup;
 			children = (
-				0ADAEBE523900B38009D8629 /* Interface.storyboard */,
-				0ADAEBE823900B39009D8629 /* Assets.xcassets */,
-				0ADAEBEA23900B39009D8629 /* Info.plist */,
+				0ACA24BB23E01986007102DD /* util */,
+				0A4066C223DAFE570085DEC6 /* sleepwatches.entitlements */,
+				0AD5A8AE23D607AD00467AB9 /* AppDelegate.swift */,
+				0AD5A8B023D607AD00467AB9 /* SceneDelegate.swift */,
+				0AD5A8B223D607AD00467AB9 /* ViewController.swift */,
+				0AD5A8B423D607AD00467AB9 /* Main.storyboard */,
+				0AD5A8B723D607AE00467AB9 /* Assets.xcassets */,
+				0AD5A8B923D607AE00467AB9 /* LaunchScreen.storyboard */,
+				0AD5A8BC23D607AE00467AB9 /* Info.plist */,
+			);
+			path = sleepwatches;
+			sourceTree = "<group>";
+		};
+		0AD5A8C323D607AE00467AB9 /* sleepwatches WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				0A7FDB1023E083F3000B89B8 /* sleepwatches WatchKit App.entitlements */,
+				0AD5A8C423D607AE00467AB9 /* Interface.storyboard */,
+				0AD5A8C723D607AF00467AB9 /* Assets.xcassets */,
+				0AD5A8C923D607AF00467AB9 /* Info.plist */,
 			);
 			path = "sleepwatches WatchKit App";
 			sourceTree = "<group>";
 		};
-		0ADAEBF323900B39009D8629 /* sleepwatches WatchKit Extension */ = {
+		0AD5A8D223D607AF00467AB9 /* sleepwatches WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0ADAEC1623900CE8009D8629 /* sleepwatches WatchKit Extension.entitlements */,
-				0A5031E3239C167000A1CD1C /* util */,
-				0ADAEBF623900B39009D8629 /* ExtensionDelegate.swift */,
-				0ADAEBF423900B39009D8629 /* InterfaceController.swift */,
-				0ADAEC0B23900BD4009D8629 /* InterfaceController+Health.swift */,
-				0ADAEC0923900BD4009D8629 /* InterfaceController+Location.swift */,
-				0ADAEC0A23900BD4009D8629 /* InterfaceController+Motion.swift */,
-				0A5031E7239C16D100A1CD1C /* SleepResultController.swift */,
-				0A5031E8239C16D100A1CD1C /* SleepResultController+Sleep.swift */,
-				0A5031E6239C16D100A1CD1C /* SleepRow.swift */,
-				0A5031E9239C16D100A1CD1C /* SleepTrackController.swift */,
-				0ADAEBF823900B39009D8629 /* Assets.xcassets */,
-				0ADAEBFA23900B39009D8629 /* Info.plist */,
+				0AD5A90C23D6097200467AB9 /* sleepwatches WatchKit Extension.entitlements */,
+				0AD5A8ED23D608B000467AB9 /* util */,
+				0AD5A8D323D607AF00467AB9 /* InterfaceController.swift */,
+				0AD5A8F923D608B000467AB9 /* InterfaceController+Health.swift */,
+				0AD5A8EA23D608B000467AB9 /* InterfaceController+Location.swift */,
+				0AD5A8EB23D608B000467AB9 /* InterfaceController+Motion.swift */,
+				0AD5A8EC23D608B000467AB9 /* SleepResultController.swift */,
+				0AD5A8E723D608B000467AB9 /* SleepResultController+Sleep.swift */,
+				0AD5A8E823D608B000467AB9 /* SleepRow.swift */,
+				0AD5A8F823D608B000467AB9 /* SleepTrackController.swift */,
+				0AD5A8D523D607AF00467AB9 /* ExtensionDelegate.swift */,
+				0AD5A8D723D607AF00467AB9 /* Assets.xcassets */,
+				0AD5A8D923D607AF00467AB9 /* Info.plist */,
 			);
 			path = "sleepwatches WatchKit Extension";
 			sourceTree = "<group>";
 		};
-		0ADAEC1723900CE8009D8629 /* Frameworks */ = {
+		0AD5A8ED23D608B000467AB9 /* util */ = {
 			isa = PBXGroup;
 			children = (
-				0ADAEC1823900CE8009D8629 /* HealthKit.framework */,
+				0A4066BE23DACC890085DEC6 /* WatchKitConnection.swift */,
+				0AD5A8F323D608B000467AB9 /* Date+Next.swift */,
+				0AD5A8F423D608B000467AB9 /* Double+Round.swift */,
+				0A7FDB0623E0800D000B89B8 /* AES.swift */,
+				0A7FDB0223E0800D000B89B8 /* Constant.swift */,
+				0A7FDB0723E0800D000B89B8 /* JsonError.swift */,
+				0A7FDB0123E0800D000B89B8 /* Network.swift */,
+				0A7FDB0523E0800D000B89B8 /* NetworkError.swift */,
+				0A7FDB0423E0800D000B89B8 /* NetworkResponse.swift */,
+				0A7FDB0323E0800D000B89B8 /* NSURLRequest+Certificate.swift */,
+				0A7FDB0023E0800D000B89B8 /* UUIDGenerator.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		0AD5A90D23D6097200467AB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A4066C323DAFE570085DEC6 /* HealthKit.framework */,
+				0AD5A90E23D6097200467AB9 /* HealthKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,47 +280,49 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0ADAEBDB23900B38009D8629 /* sleepwatches */ = {
+		0AD5A8AA23D607AD00467AB9 /* sleepwatches */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0ADAEC0523900B3A009D8629 /* Build configuration list for PBXNativeTarget "sleepwatches" */;
+			buildConfigurationList = 0AD5A8E423D607AF00467AB9 /* Build configuration list for PBXNativeTarget "sleepwatches" */;
 			buildPhases = (
-				0ADAEBDA23900B38009D8629 /* Resources */,
-				0ADAEC0423900B3A009D8629 /* Embed Watch Content */,
+				0AD5A8A723D607AD00467AB9 /* Sources */,
+				0AD5A8A823D607AD00467AB9 /* Frameworks */,
+				0AD5A8A923D607AD00467AB9 /* Resources */,
+				0AD5A8E323D607AF00467AB9 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0ADAEBE323900B38009D8629 /* PBXTargetDependency */,
+				0AD5A8C223D607AE00467AB9 /* PBXTargetDependency */,
 			);
 			name = sleepwatches;
 			productName = sleepwatches;
-			productReference = 0ADAEBDC23900B38009D8629 /* sleepwatches.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
+			productReference = 0AD5A8AB23D607AD00467AB9 /* sleepwatches.app */;
+			productType = "com.apple.product-type.application";
 		};
-		0ADAEBDF23900B38009D8629 /* sleepwatches WatchKit App */ = {
+		0AD5A8BE23D607AE00467AB9 /* sleepwatches WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0ADAEC0123900B3A009D8629 /* Build configuration list for PBXNativeTarget "sleepwatches WatchKit App" */;
+			buildConfigurationList = 0AD5A8E023D607AF00467AB9 /* Build configuration list for PBXNativeTarget "sleepwatches WatchKit App" */;
 			buildPhases = (
-				0ADAEBDE23900B38009D8629 /* Resources */,
-				0ADAEC0023900B3A009D8629 /* Embed App Extensions */,
+				0AD5A8BD23D607AE00467AB9 /* Resources */,
+				0AD5A8DF23D607AF00467AB9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0ADAEBF223900B39009D8629 /* PBXTargetDependency */,
+				0AD5A8D123D607AF00467AB9 /* PBXTargetDependency */,
 			);
 			name = "sleepwatches WatchKit App";
 			productName = "sleepwatches WatchKit App";
-			productReference = 0ADAEBE023900B38009D8629 /* sleepwatches WatchKit App.app */;
+			productReference = 0AD5A8BF23D607AE00467AB9 /* sleepwatches WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		0ADAEBEE23900B39009D8629 /* sleepwatches WatchKit Extension */ = {
+		0AD5A8CD23D607AF00467AB9 /* sleepwatches WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0ADAEBFD23900B3A009D8629 /* Build configuration list for PBXNativeTarget "sleepwatches WatchKit Extension" */;
+			buildConfigurationList = 0AD5A8DC23D607AF00467AB9 /* Build configuration list for PBXNativeTarget "sleepwatches WatchKit Extension" */;
 			buildPhases = (
-				0ADAEBEB23900B39009D8629 /* Sources */,
-				0ADAEBEC23900B39009D8629 /* Frameworks */,
-				0ADAEBED23900B39009D8629 /* Resources */,
+				0AD5A8CA23D607AF00467AB9 /* Sources */,
+				0AD5A8CB23D607AF00467AB9 /* Frameworks */,
+				0AD5A8CC23D607AF00467AB9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -248,30 +330,31 @@
 			);
 			name = "sleepwatches WatchKit Extension";
 			productName = "sleepwatches WatchKit Extension";
-			productReference = 0ADAEBEF23900B39009D8629 /* sleepwatches WatchKit Extension.appex */;
+			productReference = 0AD5A8CE23D607AF00467AB9 /* sleepwatches WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0ADAEBD623900B38009D8629 /* Project object */ = {
+		0AD5A8A323D607AD00467AB9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "pongsil vachirajongkol";
 				TargetAttributes = {
-					0ADAEBDB23900B38009D8629 = {
-						CreatedOnToolsVersion = 11.2.1;
+					0AD5A8AA23D607AD00467AB9 = {
+						CreatedOnToolsVersion = 11.3.1;
 					};
-					0ADAEBDF23900B38009D8629 = {
-						CreatedOnToolsVersion = 11.2.1;
+					0AD5A8BE23D607AE00467AB9 = {
+						CreatedOnToolsVersion = 11.3.1;
 					};
-					0ADAEBEE23900B39009D8629 = {
-						CreatedOnToolsVersion = 11.2.1;
+					0AD5A8CD23D607AF00467AB9 = {
+						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 0ADAEBD923900B38009D8629 /* Build configuration list for PBXProject "sleepwatches" */;
+			buildConfigurationList = 0AD5A8A623D607AD00467AB9 /* Build configuration list for PBXProject "sleepwatches" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -279,92 +362,132 @@
 				en,
 				Base,
 			);
-			mainGroup = 0ADAEBD523900B38009D8629;
-			productRefGroup = 0ADAEBDD23900B38009D8629 /* Products */;
+			mainGroup = 0AD5A8A223D607AD00467AB9;
+			productRefGroup = 0AD5A8AC23D607AD00467AB9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0ADAEBDB23900B38009D8629 /* sleepwatches */,
-				0ADAEBDF23900B38009D8629 /* sleepwatches WatchKit App */,
-				0ADAEBEE23900B39009D8629 /* sleepwatches WatchKit Extension */,
+				0AD5A8AA23D607AD00467AB9 /* sleepwatches */,
+				0AD5A8BE23D607AE00467AB9 /* sleepwatches WatchKit App */,
+				0AD5A8CD23D607AF00467AB9 /* sleepwatches WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0ADAEBDA23900B38009D8629 /* Resources */ = {
+		0AD5A8A923D607AD00467AB9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD5A8BB23D607AE00467AB9 /* LaunchScreen.storyboard in Resources */,
+				0AD5A8B823D607AE00467AB9 /* Assets.xcassets in Resources */,
+				0AD5A8B623D607AD00467AB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0ADAEBDE23900B38009D8629 /* Resources */ = {
+		0AD5A8BD23D607AE00467AB9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ADAEBE923900B39009D8629 /* Assets.xcassets in Resources */,
-				0ADAEBE723900B38009D8629 /* Interface.storyboard in Resources */,
+				0AD5A8C823D607AF00467AB9 /* Assets.xcassets in Resources */,
+				0AD5A8C623D607AE00467AB9 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0ADAEBED23900B39009D8629 /* Resources */ = {
+		0AD5A8CC23D607AF00467AB9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ADAEBF923900B39009D8629 /* Assets.xcassets in Resources */,
+				0AD5A8D823D607AF00467AB9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0ADAEBEB23900B39009D8629 /* Sources */ = {
+		0AD5A8A723D607AD00467AB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A852032239FBADD004593C3 /* Network.swift in Sources */,
-				0A852035239FBB4B004593C3 /* NetworkError.swift in Sources */,
-				0ADAEC1023900BD4009D8629 /* InterfaceController+Motion.swift in Sources */,
-				0ADAEBF723900B39009D8629 /* ExtensionDelegate.swift in Sources */,
-				0ADAEC1323900BD4009D8629 /* Double+Round.swift in Sources */,
-				0A5031EC239C16D200A1CD1C /* SleepResultController+Sleep.swift in Sources */,
-				0ADAEC0E23900BD4009D8629 /* AES.swift in Sources */,
-				0ADAEC0F23900BD4009D8629 /* InterfaceController+Location.swift in Sources */,
-				0ADAEC1123900BD4009D8629 /* InterfaceController+Health.swift in Sources */,
-				0A5031E5239C168800A1CD1C /* Date+Next.swift in Sources */,
-				0A5031EA239C16D200A1CD1C /* SleepRow.swift in Sources */,
-				0A85203E239FD017004593C3 /* Constant.swift in Sources */,
-				0A852036239FBB4B004593C3 /* NetworkResponse.swift in Sources */,
-				0A5031ED239C16D200A1CD1C /* SleepTrackController.swift in Sources */,
-				0A6A477F23B678E400BAF679 /* NSURLRequest+Certificate.swift in Sources */,
-				0A85203C239FC9B5004593C3 /* UUIDGenerator.swift in Sources */,
-				0A5031EB239C16D200A1CD1C /* SleepResultController.swift in Sources */,
-				0A852038239FBB52004593C3 /* JsonError.swift in Sources */,
-				0ADAEBF523900B39009D8629 /* InterfaceController.swift in Sources */,
+				0ACA24CB23E019B6007102DD /* NSURLRequest+Certificate.swift in Sources */,
+				0ACA24C723E019B6007102DD /* Constant.swift in Sources */,
+				0AD5A8B323D607AD00467AB9 /* ViewController.swift in Sources */,
+				0ACA24C523E019B6007102DD /* NetworkResponse.swift in Sources */,
+				0AD5A8AF23D607AD00467AB9 /* AppDelegate.swift in Sources */,
+				0A66964123D8B8B200C40A3F /* Date+Next.swift in Sources */,
+				0ACA24C923E019B6007102DD /* Network.swift in Sources */,
+				0ACA24C623E019B6007102DD /* UUIDGenerator.swift in Sources */,
+				0ACA24C823E019B6007102DD /* JsonError.swift in Sources */,
+				0AD5A8B123D607AD00467AB9 /* SceneDelegate.swift in Sources */,
+				0ACA24CC23E019B6007102DD /* WatchKitConnection.swift in Sources */,
+				0ACA24CA23E019B6007102DD /* NetworkError.swift in Sources */,
+				0ACA24CD23E019B6007102DD /* AES.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AD5A8CA23D607AF00467AB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AD5A90623D608B000467AB9 /* Double+Round.swift in Sources */,
+				0A7FDB0E23E0800D000B89B8 /* AES.swift in Sources */,
+				0AD5A8D623D607AF00467AB9 /* ExtensionDelegate.swift in Sources */,
+				0A7FDB0A23E0800D000B89B8 /* Constant.swift in Sources */,
+				0AD5A8FF23D608B000467AB9 /* SleepResultController.swift in Sources */,
+				0A7FDB0B23E0800D000B89B8 /* NSURLRequest+Certificate.swift in Sources */,
+				0AD5A8FA23D608B000467AB9 /* SleepResultController+Sleep.swift in Sources */,
+				0AD5A8FE23D608B000467AB9 /* InterfaceController+Motion.swift in Sources */,
+				0AD5A8FB23D608B000467AB9 /* SleepRow.swift in Sources */,
+				0AD5A8FD23D608B000467AB9 /* InterfaceController+Location.swift in Sources */,
+				0A7FDB0F23E0800D000B89B8 /* JsonError.swift in Sources */,
+				0A4066BF23DACC890085DEC6 /* WatchKitConnection.swift in Sources */,
+				0AD5A90A23D608B000467AB9 /* SleepTrackController.swift in Sources */,
+				0AD5A90523D608B000467AB9 /* Date+Next.swift in Sources */,
+				0A7FDB0C23E0800D000B89B8 /* NetworkResponse.swift in Sources */,
+				0AD5A90B23D608B000467AB9 /* InterfaceController+Health.swift in Sources */,
+				0AD5A8D423D607AF00467AB9 /* InterfaceController.swift in Sources */,
+				0A7FDB0D23E0800D000B89B8 /* NetworkError.swift in Sources */,
+				0A7FDB0923E0800D000B89B8 /* Network.swift in Sources */,
+				0A7FDB0823E0800D000B89B8 /* UUIDGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0ADAEBE323900B38009D8629 /* PBXTargetDependency */ = {
+		0AD5A8C223D607AE00467AB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0ADAEBDF23900B38009D8629 /* sleepwatches WatchKit App */;
-			targetProxy = 0ADAEBE223900B38009D8629 /* PBXContainerItemProxy */;
+			target = 0AD5A8BE23D607AE00467AB9 /* sleepwatches WatchKit App */;
+			targetProxy = 0AD5A8C123D607AE00467AB9 /* PBXContainerItemProxy */;
 		};
-		0ADAEBF223900B39009D8629 /* PBXTargetDependency */ = {
+		0AD5A8D123D607AF00467AB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0ADAEBEE23900B39009D8629 /* sleepwatches WatchKit Extension */;
-			targetProxy = 0ADAEBF123900B39009D8629 /* PBXContainerItemProxy */;
+			target = 0AD5A8CD23D607AF00467AB9 /* sleepwatches WatchKit Extension */;
+			targetProxy = 0AD5A8D023D607AF00467AB9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0ADAEBE523900B38009D8629 /* Interface.storyboard */ = {
+		0AD5A8B423D607AD00467AB9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0ADAEBE623900B38009D8629 /* Base */,
+				0AD5A8B523D607AD00467AB9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0AD5A8B923D607AE00467AB9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AD5A8BA23D607AE00467AB9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0AD5A8C423D607AE00467AB9 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AD5A8C523D607AE00467AB9 /* Base */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -372,7 +495,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0ADAEBFB23900B3A009D8629 /* Debug */ = {
+		0AD5A8DA23D607AF00467AB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -422,6 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -431,7 +555,7 @@
 			};
 			name = Debug;
 		};
-		0ADAEBFC23900B3A009D8629 /* Release */ = {
+		0AD5A8DB23D607AF00467AB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -475,6 +599,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -484,13 +609,12 @@
 			};
 			name = Release;
 		};
-		0ADAEBFE23900B3A009D8629 /* Debug */ = {
+		0AD5A8DD23D607AF00467AB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit Extension/sleepwatches WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = "sleepwatches WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -508,13 +632,12 @@
 			};
 			name = Debug;
 		};
-		0ADAEBFF23900B3A009D8629 /* Release */ = {
+		0AD5A8DE23D607AF00467AB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit Extension/sleepwatches WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = "sleepwatches WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -532,13 +655,13 @@
 			};
 			name = Release;
 		};
-		0ADAEC0223900B3A009D8629 /* Debug */ = {
+		0AD5A8E123D607AF00467AB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit App/sleepwatches WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				IBSC_MODULE = sleepwatches_WatchKit_Extension;
 				INFOPLIST_FILE = "sleepwatches WatchKit App/Info.plist";
@@ -552,13 +675,13 @@
 			};
 			name = Debug;
 		};
-		0ADAEC0323900B3A009D8629 /* Release */ = {
+		0AD5A8E223D607AF00467AB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit App/sleepwatches WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				IBSC_MODULE = sleepwatches_WatchKit_Extension;
 				INFOPLIST_FILE = "sleepwatches WatchKit App/Info.plist";
@@ -572,74 +695,84 @@
 			};
 			name = Release;
 		};
-		0ADAEC0623900B3A009D8629 /* Debug */ = {
+		0AD5A8E523D607AF00467AB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sleepwatches/sleepwatches.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 65VQ762N68;
-				INFOPLIST_FILE = Info.plist;
-				MARKETING_VERSION = 1.0;
+				INFOPLIST_FILE = sleepwatches/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sleepwatches;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		0ADAEC0723900B3A009D8629 /* Release */ = {
+		0AD5A8E623D607AF00467AB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sleepwatches/sleepwatches.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 65VQ762N68;
-				INFOPLIST_FILE = Info.plist;
-				MARKETING_VERSION = 1.0;
+				INFOPLIST_FILE = sleepwatches/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sleepwatches;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0ADAEBD923900B38009D8629 /* Build configuration list for PBXProject "sleepwatches" */ = {
+		0AD5A8A623D607AD00467AB9 /* Build configuration list for PBXProject "sleepwatches" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0ADAEBFB23900B3A009D8629 /* Debug */,
-				0ADAEBFC23900B3A009D8629 /* Release */,
+				0AD5A8DA23D607AF00467AB9 /* Debug */,
+				0AD5A8DB23D607AF00467AB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0ADAEBFD23900B3A009D8629 /* Build configuration list for PBXNativeTarget "sleepwatches WatchKit Extension" */ = {
+		0AD5A8DC23D607AF00467AB9 /* Build configuration list for PBXNativeTarget "sleepwatches WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0ADAEBFE23900B3A009D8629 /* Debug */,
-				0ADAEBFF23900B3A009D8629 /* Release */,
+				0AD5A8DD23D607AF00467AB9 /* Debug */,
+				0AD5A8DE23D607AF00467AB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0ADAEC0123900B3A009D8629 /* Build configuration list for PBXNativeTarget "sleepwatches WatchKit App" */ = {
+		0AD5A8E023D607AF00467AB9 /* Build configuration list for PBXNativeTarget "sleepwatches WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0ADAEC0223900B3A009D8629 /* Debug */,
-				0ADAEC0323900B3A009D8629 /* Release */,
+				0AD5A8E123D607AF00467AB9 /* Debug */,
+				0AD5A8E223D607AF00467AB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0ADAEC0523900B3A009D8629 /* Build configuration list for PBXNativeTarget "sleepwatches" */ = {
+		0AD5A8E423D607AF00467AB9 /* Build configuration list for PBXNativeTarget "sleepwatches" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0ADAEC0623900B3A009D8629 /* Debug */,
-				0ADAEC0723900B3A009D8629 /* Release */,
+				0AD5A8E523D607AF00467AB9 /* Debug */,
+				0AD5A8E623D607AF00467AB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0ADAEBD623900B38009D8629 /* Project object */;
+	rootObject = 0AD5A8A323D607AD00467AB9 /* Project object */;
 }
