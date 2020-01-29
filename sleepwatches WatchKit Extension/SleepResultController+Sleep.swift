@@ -173,7 +173,7 @@ extension SleepResultController {
     
     func postSleepTrack(param: [String:Any]) {
         
-        self.apiNetwork.post(path: "/sleep/track", params: param ){ (data, error) in
+        self.apiNetwork.post(path: "/api/v1/apple/sleep", params: param ){ (data, error) in
             
             guard let data = data else {
                 return
