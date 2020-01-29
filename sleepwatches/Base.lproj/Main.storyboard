@@ -23,16 +23,16 @@
             </objects>
             <point key="canvasLocation" x="-1293" y="-36"/>
         </scene>
-        <!--View Controller-->
+        <!--Sleep Watches-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sleepwatches" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sleep Watches" id="BYZ-38-t0r" customClass="ViewController" customModule="sleepwatches" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Wrp-k6-8FP">
-                                <rect key="frame" x="10" y="88" width="394" height="545.5"/>
+                                <rect key="frame" x="10" y="98" width="394" height="545.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="657-xX-niG">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
@@ -241,12 +241,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Wrp-k6-8FP" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="10" id="9ZZ-Qs-dxq"/>
-                            <constraint firstItem="Wrp-k6-8FP" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" id="tDc-fL-1bT"/>
+                            <constraint firstItem="Wrp-k6-8FP" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" constant="10" id="tDc-fL-1bT"/>
                             <constraint firstItem="Wrp-k6-8FP" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" constant="-10" id="xR8-zo-xle"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pjz-Is-8Bj"/>
+                    <navigationItem key="navigationItem" title="Sleep Watches" id="pjz-Is-8Bj"/>
                     <connections>
                         <outlet property="acceleroLabel" destination="UsA-lO-UoS" id="JgT-Pj-JIK"/>
                         <outlet property="altitudeLabel" destination="kCt-dD-ZP0" id="tl3-k6-Scg"/>

@@ -47,7 +47,7 @@
                                         <action selector="startAction" destination="AgC-eL-Hgc" id="16j-Kr-ygK"/>
                                     </connections>
                                 </button>
-                                <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="End" id="aaR-BI-cv5">
+                                <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="Stop" id="aaR-BI-cv5">
                                     <connections>
                                         <action selector="stopAction" destination="AgC-eL-Hgc" id="LmE-49-Nu1"/>
                                     </connections>
@@ -95,7 +95,7 @@
                                         <action selector="startAction" destination="o2c-aP-Xzj" id="7Zd-pt-pAN"/>
                                     </connections>
                                 </button>
-                                <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="End" id="Tqq-PP-OGn">
+                                <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="Stop" id="Tqq-PP-OGn">
                                     <connections>
                                         <segue destination="NRU-ON-8ZA" kind="push" id="biy-hu-mV9"/>
                                     </connections>
