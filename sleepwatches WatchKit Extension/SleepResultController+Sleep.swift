@@ -131,7 +131,7 @@ extension SleepResultController {
     
     func requestSleepTrack(result:[HKSample]) {
         
-        apiNetwork = Network(host: WatchKitConnection.shared.host)
+        apiNetwork = Network(host: "https://\(WatchKitConnection.shared.host)")
         
         for (i,item) in result.enumerated() {
             if let sample = item as? HKCategorySample {

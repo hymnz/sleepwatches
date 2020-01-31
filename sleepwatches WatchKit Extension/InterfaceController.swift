@@ -46,7 +46,6 @@ class InterfaceController: WKInterfaceController,WatchKitConnectionDelegate {
     
     func didReceiveInterval(_ interval: String) {
         self.timeInterval = TimeInterval(Int(interval) ?? 5)
-        self.stopAction()
         self.startAction()
     }
     

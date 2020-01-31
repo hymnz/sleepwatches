@@ -28,7 +28,7 @@ class ViewController: UIViewController, WatchKitConnectionDelegate, UITextFieldD
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.hostTextField.text = Constant.HOST
-        self.apiNetwork = Network(host: Constant.HOST)
+        self.apiNetwork = Network(host: "https://\(Constant.HOST)")
         self.syncStatusLabel.text = "Apple Watch is Not Sync"
     }
     
@@ -106,7 +106,7 @@ class ViewController: UIViewController, WatchKitConnectionDelegate, UITextFieldD
         
         print(param)
         
-        apiNetwork.post(path: "/api/v1/apple/watches", params: param ){ (data, error) in
+        apiNetwork.post(path: "/daily/track", params: param ){ (data, error) in
         
             guard let data = data else {
                 return
@@ -130,7 +130,7 @@ class ViewController: UIViewController, WatchKitConnectionDelegate, UITextFieldD
         
         if let host = self.hostTextField.text,
             let interval = self.segmentControl.titleForSegment(at: self.segmentControl.selectedSegmentIndex) {
-            self.apiNetwork = Network(host: host)
+            self.apiNetwork = Network(host: "https://\(host)")
             WatchKitConnection.shared.sendMessage(message: ["host" : host as AnyObject,"uuid" : UUIDGenerator.sharedInstance.string as AnyObject, "interval" : interval as AnyObject])
         }
     }

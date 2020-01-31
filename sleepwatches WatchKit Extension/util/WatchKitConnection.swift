@@ -80,7 +80,9 @@ extension WatchKitConnection: WCSessionDelegate {
             
             self.host = host
             UUIDGenerator.sharedInstance.string = uuid
-            delegate?.didReceiveInterval(interval)
+            DispatchQueue.main.async {
+                self.delegate?.didReceiveInterval(interval)
+            }
             
             sendMessage(message: ["success": "ok" as AnyObject])
         }

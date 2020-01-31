@@ -39,15 +39,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B5D3B040-6ECA-43A0-AAAE-73C637C975D9"
+            uuid = "9D47781C-2A73-4ED4-90DB-CEC4E02EB2C1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "sleepwatches WatchKit Extension/SleepResultController+Sleep.swift"
+            filePath = "sleepwatches/util/NSURLRequest+Certificate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196">
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "allowsAnyHTTPSCertificate(forHost:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
