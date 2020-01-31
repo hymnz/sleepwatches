@@ -106,7 +106,7 @@ class ViewController: UIViewController, WatchKitConnectionDelegate, UITextFieldD
         
         print(param)
         
-        apiNetwork.post(path: "/daily/track", params: param ){ (data, error) in
+        apiNetwork.post(path: "/api/v1/apple/watches", params: param ){ (data, error) in
         
             guard let data = data else {
                 return
