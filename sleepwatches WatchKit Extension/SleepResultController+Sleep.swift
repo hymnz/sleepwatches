@@ -42,16 +42,21 @@ extension SleepResultController {
             
             activities?.forEach { activity in
                 if activity.stationary {
+                    if let startDate = lastAwakeDate {
+                        self.saveSleepAnalysis(type: HKCategoryValueSleepAnalysis.awake.rawValue, start: startDate, end: activity.startDate)
+                        lastAwakeDate = nil
+                    }
                     if lastSleepDate == nil {
                         lastSleepDate = activity.startDate
                     }
-                    lastAwakeDate = nil
                 } else {
                     if let startDate = lastSleepDate {
                         self.saveSleepAnalysis(type: HKCategoryValueSleepAnalysis.asleep.rawValue, start: startDate, end: activity.startDate)
                         lastSleepDate = nil
                     }
-                    lastAwakeDate = activity.startDate
+                    if lastAwakeDate == nil {
+                        lastAwakeDate = activity.startDate
+                    }
                 }
             }
             if let startDate = lastSleepDate {

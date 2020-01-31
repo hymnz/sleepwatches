@@ -239,10 +239,10 @@
 				0AD5A8F923D608B000467AB9 /* InterfaceController+Health.swift */,
 				0AD5A8EA23D608B000467AB9 /* InterfaceController+Location.swift */,
 				0AD5A8EB23D608B000467AB9 /* InterfaceController+Motion.swift */,
+				0AD5A8F823D608B000467AB9 /* SleepTrackController.swift */,
 				0AD5A8EC23D608B000467AB9 /* SleepResultController.swift */,
 				0AD5A8E723D608B000467AB9 /* SleepResultController+Sleep.swift */,
 				0AD5A8E823D608B000467AB9 /* SleepRow.swift */,
-				0AD5A8F823D608B000467AB9 /* SleepTrackController.swift */,
 				0AD5A8D523D607AF00467AB9 /* ExtensionDelegate.swift */,
 				0AD5A8D723D607AF00467AB9 /* Assets.xcassets */,
 				0AD5A8D923D607AF00467AB9 /* Info.plist */,
@@ -615,7 +615,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit Extension/sleepwatches WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 37;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = "sleepwatches WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -639,7 +639,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit Extension/sleepwatches WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 37;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = "sleepwatches WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -664,7 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit App/sleepwatches WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 37;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				IBSC_MODULE = sleepwatches_WatchKit_Extension;
 				INFOPLIST_FILE = "sleepwatches WatchKit App/Info.plist";
@@ -685,7 +685,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "sleepwatches WatchKit App/sleepwatches WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 37;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				IBSC_MODULE = sleepwatches_WatchKit_Extension;
 				INFOPLIST_FILE = "sleepwatches WatchKit App/Info.plist";
@@ -705,7 +705,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = sleepwatches/sleepwatches.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 37;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = sleepwatches/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -725,7 +725,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = sleepwatches/sleepwatches.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 37;
 				DEVELOPMENT_TEAM = 65VQ762N68;
 				INFOPLIST_FILE = sleepwatches/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
