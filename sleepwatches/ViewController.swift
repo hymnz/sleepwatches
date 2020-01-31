@@ -97,7 +97,7 @@ class ViewController: UIViewController, WatchKitConnectionDelegate, UITextFieldD
             let y = gyro["y"] as? Double,
             let z = gyro["z"] as? Double {
             self.gyroLabel.text = "x: \(x),\n y: \(y),\n z: \(z)"
-            trackEncrypt["acc"] = ["x":encrypt(String(x)),"y":encrypt(String(y)),"z":encrypt(String(z))]
+            trackEncrypt["gyr"] = ["x":encrypt(String(x)),"y":encrypt(String(y)),"z":encrypt(String(z))]
         }
         
         var param :[String:Any] = ["userId": UUIDGenerator.sharedInstance.string]

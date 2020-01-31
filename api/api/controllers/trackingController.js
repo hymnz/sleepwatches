@@ -21,6 +21,8 @@ exports.daily = function(req, res) {
   new_track.payload.hr = decrypt(payload.hr);
   new_track.payload.speed = decrypt(payload.speed);
 
+  new_track.payload.altitude = decrypt(payload.altitude)
+
   var geo = payload.geo;
   if (geo != null) {
     new_track.payload.geo.lat = decrypt(geo.lat);
