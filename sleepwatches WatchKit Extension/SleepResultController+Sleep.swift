@@ -86,7 +86,7 @@ extension SleepResultController {
             
             let predicate = HKQuery.predicateForSamples(withStart: self.startDate, end: self.endDate, options: [])
             
-            let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+            let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)
             
             let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: [sortDescriptor]) { (query, tmpResult, error) -> Void in
                 
@@ -138,18 +138,43 @@ extension SleepResultController {
         
         apiNetwork = Network(host: "https://\(WatchKitConnection.shared.host)")
         
+        var totalInBed = 0
+        var totalAsleep = 0
+        var totalAwake = 0
+        
+        var listInBed: [[String:String]] = []
+        var listAsleep: [[String:String]] = []
+        var listAwake: [[String:String]] = []
+        
+        
         for (i,item) in result.enumerated() {
             if let sample = item as? HKCategorySample {
                               
                 if let row = resultTable.rowController(at: i) as? SleepRow {
                     var value = "Unknow"
                     switch sample.value {
-                    case HKCategoryValueSleepAnalysis.inBed.rawValue:
+                    case HKCategoryValueSleepAnalysis.inBed.rawValue: do {
                         value = "InBed"
-                    case HKCategoryValueSleepAnalysis.asleep.rawValue:
+                        totalInBed += 1
+                    
+                        listInBed.append(["start":encrypt(sample.startDate.toCurrentTimeZoneString()),
+                                          "end":encrypt(sample.endDate.toCurrentTimeZoneString())])
+                        
+                        }
+                    case HKCategoryValueSleepAnalysis.asleep.rawValue: do {
                         value = "Asleep"
-                    case HKCategoryValueSleepAnalysis.awake.rawValue:
+                        totalAsleep += 1
+                        
+                        listAsleep.append(["start":encrypt(sample.startDate.toCurrentTimeZoneString()),
+                                           "end":encrypt(sample.endDate.toCurrentTimeZoneString())])
+                        }
+                    case HKCategoryValueSleepAnalysis.awake.rawValue: do {
                         value = "Awake"
+                        totalAwake += 1
+                        
+                        listAwake.append(["start":encrypt(sample.startDate.toCurrentTimeZoneString()),
+                                          "end":encrypt(sample.endDate.toCurrentTimeZoneString())])
+                        }
                     default:
                         value = "Unknow"
                     }
@@ -158,15 +183,18 @@ extension SleepResultController {
                     row.startLabel.setText("Start : \(sample.startDate.toCurrentTimeZoneString())")
                     row.endLabel.setText("End : \(sample.endDate.toCurrentTimeZoneString())")
             
-                    let track :[String:Any] = ["userId": UUIDGenerator.sharedInstance.string,
-                                               "type": encrypt(value),
-                                               "start": encrypt("\(sample.startDate.toCurrentTimeZoneString())"),
-                                               "end": encrypt("\(sample.endDate.toCurrentTimeZoneString())")]
-                        
-                    self.postSleepTrack(param: track)
                 }
             }
         }
+        
+        let sleep = ["InBed": listInBed, "Asleep": listAsleep, "Awake": listAwake]
+        let summary = ["totalInBed": totalInBed,"totalAsleep": totalAsleep,"totalAwake": totalAwake]
+        let data = ["sleep":sleep,"summary":summary] as [String : Any]
+
+        let track :[String:Any] = ["userId": UUIDGenerator.sharedInstance.string,
+                                   "payload": data]
+            
+        self.postSleepTrack(param: track)
     }
     
     func encrypt(_ string:String) -> String {               // 16 bytes for AES128

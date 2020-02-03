@@ -52,9 +52,38 @@ exports.daily = function(req, res) {
 
 exports.sleep = function(req, res) {
   var new_track = new SleepTrack(req.body);
-  new_track.type = decrypt(new_track.type);
-  new_track.start = decrypt(new_track.start);
-  new_track.end = decrypt(new_track.end);
+  
+  if (new_track.payload.sleep.InBed != null) {
+    var i=0
+    console.log(new_track.payload.sleep.InBed);
+    for (let item of new_track.payload.sleep.InBed) {
+      new_track.payload.sleep.InBed[i].start = decrypt(item.start);
+      new_track.payload.sleep.InBed[i].end = decrypt(item.end);
+      i++;
+    }
+  }
+
+  if (new_track.payload.sleep.Asleep != null) {
+    var i=0
+    console.log(new_track.payload.sleep.Asleep);
+    for (let item of new_track.payload.sleep.Asleep) {
+      new_track.payload.sleep.Asleep[i].start = decrypt(item.start);
+      new_track.payload.sleep.Asleep[i].end = decrypt(item.end);
+      i++;
+    }
+  }
+
+  if (new_track.payload.sleep.Awake != null) {
+    var i=0
+    for (let item of new_track.payload.sleep.Awake) {
+      console.log(new_track.payload.sleep.Awake);
+      new_track.payload.sleep.Awake[i].start = decrypt(item.start);
+      new_track.payload.sleep.Awake[i].end = decrypt(item.end);
+      i++;
+    }
+  }
+  console.log(new_track);
+
   new_track.save(function(err, track) {
     if (err)
       res.send(err);
@@ -63,7 +92,7 @@ exports.sleep = function(req, res) {
 };
 
 exports.test = function(req, res) {
-    res.body("test success")
+  res.send({ 'result': 'success' });
   };
 
 function decrypt(text) {

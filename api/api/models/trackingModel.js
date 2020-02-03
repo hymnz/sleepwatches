@@ -33,14 +33,29 @@ var SleepTrackSchema = new Schema({
   userId: { 
     type: String 
   },
-  type: {
-    type: String
-  },
-  start: {
-    type: String
-  },
-  end: {
-    type: String
+  payload: {
+    sleep: {
+      InBed: [{
+        _id: false,
+        start: {type: String},
+        end: {type: String}
+      }],
+      Asleep: [{
+        _id: false,
+        start: {type: String},
+        end: {type: String}
+      }],
+      Awake: [{
+        _id: false,
+        start: {type: String},
+        end: {type: String}
+      }]
+    },
+    summary: {
+      totalInBed: {type: Number},
+      totalAsleep: { type: Number },
+      totalAwake: { type: Number }
+    },
   }
 });
 
